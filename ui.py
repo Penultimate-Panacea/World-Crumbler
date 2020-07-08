@@ -7,6 +7,7 @@ import tmap_gets
 qtcreator_file = "mainwindow.ui"
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtcreator_file)
 
+
 class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         QtWidgets.QMainWindow.__init__(self)
