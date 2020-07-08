@@ -1,11 +1,9 @@
-from decimal import Decimal
 from PyQt5 import QtGui, QtWidgets, uic
-from PyQt5.QtWidgets import QTableWidgetItem
 from sys import exit, argv
 import tmap_gets
 
-#  myappid = 'fantozzi.worldcrumble.1.0'                            #  Currently not needed
-#  windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)  #  Currently not needed
+# myappid = 'fantozzi.worldcrumble.1.0'                            #  Currently not needed
+# windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)  #  Currently not needed
 qtcreator_file = "mainwindow.ui"
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtcreator_file)
 
@@ -36,13 +34,16 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def api_uwp(self):
         sector = self.TravellerMapSector.currentText()
         hexagon = self.TravellerMapHex.text()
-        uwp_returned = tmap_gets.get_json(sector, hexagon)["WorldUwp"]
+        world = tmap_gets.get_json(sector, hexagon)
+        uwp_returned = world["WorldUwp"]
         uwp_string = uwp_returned.replace('-', '')
         i = 0
         for char in uwp_string:
             self.secondSurveyUwp[i] = char
             i += 1
         print(self.secondSurveyUwp)
+        self.TravellerMapPlanetTextDisplay
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(argv)
