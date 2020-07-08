@@ -6,1135 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>951</width>
-    <height>668</height>
+    <width>1000</width>
+    <height>640</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="widget1">
-   <widget class="QGroupBox" name="SecondSurveyInput">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>30</y>
-      <width>191</width>
-      <height>291</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Second Survey Data (1105)</string>
-    </property>
-    <property name="flat">
-     <bool>false</bool>
-    </property>
-    <property name="checkable">
-     <bool>false</bool>
-    </property>
-    <widget class="QComboBox" name="OriginalStarportInput">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>90</y>
-       <width>41</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="currentIndex">
-      <number>5</number>
-     </property>
-     <item>
-      <property name="text">
-       <string>A</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>B</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>C</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>D</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>E</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>X</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>G</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>H</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Y</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QComboBox" name="OriginalSizeInput">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>110</y>
-       <width>41</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <item>
-      <property name="text">
-       <string>0</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>5</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>6</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>7</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>8</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>9</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>A</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QComboBox" name="OriginalAtmospherInput">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>130</y>
-       <width>41</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <item>
-      <property name="text">
-       <string>0</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>5</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>6</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>7</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>8</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>9</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>A</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QComboBox" name="OriginalHydrosphereInput">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>150</y>
-       <width>41</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <item>
-      <property name="text">
-       <string>0</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>5</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>6</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>7</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>8</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>9</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>A</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QComboBox" name="OriginalPopulationInput">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>170</y>
-       <width>41</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <item>
-      <property name="text">
-       <string>0</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>5</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>6</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>7</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>8</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>9</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>A</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QComboBox" name="OriginalGovernmentInput">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>190</y>
-       <width>41</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <item>
-      <property name="text">
-       <string>0</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>5</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>6</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>7</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>8</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>9</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>A</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QComboBox" name="OriginalLawInput">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>210</y>
-       <width>41</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <item>
-      <property name="text">
-       <string>0</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>5</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>6</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>7</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>8</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>9</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>A</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QComboBox" name="OriginalTechInput">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>230</y>
-       <width>41</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <item>
-      <property name="text">
-       <string>0</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>5</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>6</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>7</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>8</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>9</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>A</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>90</y>
-       <width>131</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Starport/Spaceport</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>130</y>
-       <width>131</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Atmosphere</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>150</y>
-       <width>131</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Hydrographics</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_4">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>110</y>
-       <width>131</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Size</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_5">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>170</y>
-       <width>131</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Population</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_6">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>190</y>
-       <width>131</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Government Type</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_7">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>230</y>
-       <width>131</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Tech Level</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_8">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>210</y>
-       <width>131</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Law Level</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>260</y>
-       <width>151</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Confirm Input</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_9">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>70</y>
-       <width>131</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Subsector Letter</string>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="SubsectorLetterInput">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>70</y>
-       <width>41</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <item>
-      <property name="text">
-       <string>A</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>B</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>C</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>D</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>E</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>F</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>G</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>H</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>I</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>J</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>K</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>L</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>M</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>N</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>O</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>P</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QComboBox" name="SectorNameInput">
-     <property name="geometry">
-      <rect>
-       <x>90</x>
-       <y>50</y>
-       <width>91</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <item>
-      <property name="text">
-       <string>Ziafrplians</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Foreven</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>The Beyond</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Touchstone</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Afawahisa</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Karleaya</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Etakhasoa</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Gvurrdon</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Spinward Marches</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Trojan Reaches</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Riftspan Reaches</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Hlakhoi</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Staihaia'yo</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Aktifao</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Tuglikki</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Deneb</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Reft</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Verge</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Ealiyasiym</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Iwahfuah</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Uistrilrao</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Provence</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Corridor</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Gushemege</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Ilelish</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Reaver's Deep</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Dark Nebual</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Ustral Quadrant</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Windhorn</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Vland</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Dagudashaag</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Zarushagaar</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Daibei</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Magyar</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Canopus</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Meshan</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Lishun</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Core</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Massilia</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Diaspora</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Solomani Rim</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Aldebaran</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Mendan</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Antares</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Fornast</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Delphi</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Old Expanses</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Alpha Crucis</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Neworld</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Amdukan</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Empty Quarter</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Ley</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Glimmerdrift Reaches</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Hinterworlds</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Spica</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Langere</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Arzul</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Stars End</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Gateway</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Crucis Margin</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Leonidae</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Phlask</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Drakken</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Outside Charted Space</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QLabel" name="label_10">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>50</y>
-       <width>131</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Sector Name</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>20</y>
-       <width>171</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="inputMask">
-      <string/>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="placeholderText">
-      <string>Planet Name</string>
-     </property>
-    </widget>
-   </widget>
    <widget class="QToolBox" name="toolBox">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>300</y>
-      <width>321</width>
-      <height>271</height>
+      <x>70</x>
+      <y>110</y>
+      <width>231</width>
+      <height>371</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -1145,56 +31,1579 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>321</width>
-       <height>209</height>
+       <width>231</width>
+       <height>309</height>
       </rect>
      </property>
      <attribute name="label">
-      <string>Page 1</string>
+      <string>Manual Entry</string>
      </attribute>
+     <widget class="QGroupBox" name="SecondSurveyInput">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>231</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Manual Second Survey Input</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <widget class="QComboBox" name="OriginalStarportInput">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>90</y>
+         <width>41</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>5</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>B</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>C</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>D</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>E</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>X</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>G</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>H</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Y</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="OriginalSizeInput">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>110</y>
+         <width>41</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>7</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>9</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="OriginalAtmosphereInput">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>130</y>
+         <width>41</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>7</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>9</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="OriginalHydrosphereInput">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>150</y>
+         <width>41</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>7</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>9</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="OriginalPopulationInput">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>170</y>
+         <width>41</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>7</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>9</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="OriginalGovernmentInput">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>190</y>
+         <width>41</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <item>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>7</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>9</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="OriginalLawInput">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>210</y>
+         <width>41</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>7</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>9</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="OriginalTechInput">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>230</y>
+         <width>41</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>7</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>9</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>90</y>
+         <width>131</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Starport/Spaceport</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>130</y>
+         <width>131</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Atmosphere</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>150</y>
+         <width>131</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Hydrographics</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>110</y>
+         <width>131</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Size</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>170</y>
+         <width>131</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Population</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>190</y>
+         <width>131</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Government Type</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>230</y>
+         <width>131</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Tech Level</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>210</y>
+         <width>131</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Law Level</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ManualInputPushButton">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>260</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Submit UWP</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>70</y>
+         <width>131</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Subsector Letter</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="SubsectorLetterInput">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>70</y>
+         <width>41</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>B</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>C</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>D</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>E</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>F</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>G</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>H</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>I</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>J</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>K</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>L</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>M</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>N</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>O</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>P</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="SectorNameInput">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>50</y>
+         <width>101</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Ziafrplians</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Foreven</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>The Beyond</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Touchstone</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Afawahisa</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Karleaya</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Etakhasoa</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Gvurrdon</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Spinward Marches</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Trojan Reaches</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Riftspan Reaches</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Hlakhoi</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Staihaia'yo</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Aktifao</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Tuglikki</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Deneb</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Reft</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Verge</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ealiyasiym</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Iwahfuah</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Uistrilrao</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Provence</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Corridor</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Gushemege</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ilelish</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Reaver's Deep</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Dark Nebual</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ustral Quadrant</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Windhorn</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Vland</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Dagudashaag</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Zarushagaar</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Daibei</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Magyar</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Canopus</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Meshan</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Lishun</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Core</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Massilia</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Diaspora</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Solomani Rim</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Aldebaran</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Mendan</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Antares</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Fornast</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Delphi</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Old Expanses</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Alpha Crucis</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Neworld</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Amdukan</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Empty Quarter</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ley</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Glimmerdrift Reaches</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Hinterworlds</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Spica</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Langere</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Arzul</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Stars End</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Gateway</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Crucis Margin</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Leonidae</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Phlask</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Drakken</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Outside Charted Space</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>50</y>
+         <width>131</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Sector Name</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>20</y>
+         <width>171</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Planet Name</string>
+       </property>
+      </widget>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_2">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>321</width>
-       <height>209</height>
+       <width>231</width>
+       <height>309</height>
       </rect>
      </property>
      <attribute name="label">
-      <string>Page 2</string>
+      <string>Get From TravellerMap.com</string>
      </attribute>
+     <widget class="QComboBox" name="TravellerMapSectorName">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>10</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>8</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>Ziafrplians</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Foreven</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>The Beyond</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Touchstone</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Afawahisa</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Karleaya</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Etakhasoa</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gvurrdon</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Spinward Marches</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Trojan Reaches</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Riftspan Reaches</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Hlakhoi</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Staihaia'yo</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Aktifao</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tuglikki</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Deneb</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Reft</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Verge</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ealiyasiym</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Iwahfuah</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Uistrilrao</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Provence</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Corridor</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gushemege</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ilelish</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Reaver's Deep</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Dark Nebual</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ustral Quadrant</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Windhorn</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vland</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Dagudashaag</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Zarushagaar</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Daibei</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Magyar</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Canopus</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Meshan</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Lishun</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Core</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Massilia</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Diaspora</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Solomani Rim</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Aldebaran</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mendan</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Antares</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fornast</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Delphi</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Old Expanses</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alpha Crucis</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Neworld</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Amdukan</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Empty Quarter</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ley</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Glimmerdrift Reaches</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Hinterworlds</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Spica</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Langere</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Arzul</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Stars End</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gateway</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Crucis Margin</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Leonidae</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Phlask</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Drakken</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Outside Charted Space</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>131</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sector Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="TravellerMapCoordinate">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>40</y>
+        <width>41</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::NoContextMenu</enum>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="maxLength">
+       <number>4</number>
+      </property>
+      <property name="placeholderText">
+       <string>1111</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>40</y>
+        <width>131</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Coordinate</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="TravellerMapGetPlanet">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>80</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Get Planet</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="TravellerMapProgressBar">
+      <property name="geometry">
+       <rect>
+        <x>-3</x>
+        <y>120</y>
+        <width>221</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>24</number>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="TravellerMapPlanetTextDisplay">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>160</y>
+        <width>211</width>
+        <height>61</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
    </widget>
-   <widget class="QWebView" name="planetaryMapBefore">
+   <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>60</y>
-      <width>300</width>
-      <height>200</height>
+      <x>80</x>
+      <y>66</y>
+      <width>191</width>
+      <height>41</height>
      </rect>
     </property>
-    <property name="url">
-     <url>
-      <string>about:blank</string>
-     </url>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; font-weight:600;&quot;&gt;Data Entry&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
-   </widget>
-   <widget class="QWebView" name="planetaryMapAfter">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>340</y>
-      <width>300</width>
-      <height>200</height>
-     </rect>
-    </property>
-    <property name="url">
-     <url>
-      <string>about:blank</string>
-     </url>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
     </property>
    </widget>
   </widget>
@@ -1203,20 +1612,13 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>951</width>
+     <width>1000</width>
      <height>22</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>QWebView</class>
-   <extends>QWidget</extends>
-   <header location="global">QtWebKitWidgets/QWebView</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>
