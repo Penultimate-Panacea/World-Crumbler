@@ -1178,71 +1178,11 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>8</number>
+       <number>0</number>
       </property>
       <item>
        <property name="text">
-        <string>Ziafrplians</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Foreven</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>The Beyond</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Touchstone</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
         <string>Afawahisa</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Karleaya</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Etakhasoa</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Gvurrdon</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Spinward Marches</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Trojan Reaches</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Riftspan Reaches</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Hlakhoi</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Staihaia'yo</string>
        </property>
       </item>
       <item>
@@ -1252,167 +1192,7 @@
       </item>
       <item>
        <property name="text">
-        <string>Tuglikki</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Deneb</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Reft</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Verge</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Ealiyasiym</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Iwahfuah</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Uistrilrao</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Provence</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Corridor</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Gushemege</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Ilelish</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Reaver's Deep</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Dark Nebual</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Ustral Quadrant</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Windhorn</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Vland</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Dagudashaag</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Zarushagaar</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Daibei</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Magyar</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Canopus</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Meshan</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Lishun</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Core</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Massilia</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Diaspora</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Solomani Rim</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
         <string>Aldebaran</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Mendan</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Antares</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Fornast</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Delphi</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Old Expanses</string>
        </property>
       </item>
       <item>
@@ -1422,42 +1202,17 @@
       </item>
       <item>
        <property name="text">
-        <string>Neworld</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
         <string>Amdukan</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Empty Quarter</string>
+        <string>Angfutsag</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Ley</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Glimmerdrift Reaches</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Hinterworlds</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Spica</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Langere</string>
+        <string>Antares</string>
        </property>
       </item>
       <item>
@@ -1467,12 +1222,47 @@
       </item>
       <item>
        <property name="text">
-        <string>Stars End</string>
+        <string>Astron</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Gateway</string>
+        <string>Avereguar</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bar'kakr</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Blaskon</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Canopus</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Centrax</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Chit Botshti</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Core</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Corridor</string>
        </property>
       </item>
       <item>
@@ -1482,12 +1272,37 @@
       </item>
       <item>
        <property name="text">
-        <string>Leonidae</string>
+        <string>Dagudashaag</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Phlask</string>
+        <string>Daibei</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Dark Nebula</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Delphi</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Deneb</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Dhuerorrg</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Diaspora</string>
        </property>
       </item>
       <item>
@@ -1497,7 +1312,602 @@
       </item>
       <item>
        <property name="text">
-        <string>Outside Charted Space</string>
+        <string>Ealiyasiyw</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Eiaplial</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Empty Quarter</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Esai'yo</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Etakhasoa</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Extolian</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fa Dzaets</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Faoheiroi'iyhao</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Far Frontiers</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Folgore</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Foreven</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fornast</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ftaoiyekyu</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fulani</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gashikan</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gateway</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Genfert</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gh!hken</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ghoekhnael</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Glimmerdrift Reaches</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gn'hk'r</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Grikr!ng</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gur</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gushemege</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gvurrdon</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gzaekfueg</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gzirr!k'l</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Harea</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Heakhafaw</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Hinterworlds</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Hkakhaeaw</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Hlakhoi</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ilelish</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Iphigenaia</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Itvikiastaf</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Iwahfuah</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>K'trekreer</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kaa G!'kul</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Karleaya</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kefiykhta</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kfazz Ghik</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Khaeaw</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kharrthon</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kidunal</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Knaeleng</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Knoellighz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kolire</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Koog</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kring Noor</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ksinanirz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kteex!</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ktiin'gzat</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Langer</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Langere</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Leonidae</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ley</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Lishun</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Lorspane</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Luretiir!girr</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Magyar</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Massilia</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mavuzog</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mendan</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Meshan</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mugheen't</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Neworld</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ngathksirz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Nooq</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Nuughe</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Oeghz Vaerrghr</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Old Expanses</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Phlask</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pliabriebl</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Porlock</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Provence</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Raakaan</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Reaver's Deep</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Reft</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Rfigh</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ricenden</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Riftspan Reaches</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Sidiadl</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Solomani Rim</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Spica</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Spinward Marches</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Staihaia'yo</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Star's End</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Stiatlchepr</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tar'G'kell'p</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>The Beyond</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Theron</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Theta Borealis</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tienspevnekr</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tlyasea</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Touchstone</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Treece</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Trenchans</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Trojan Reach</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tsadra</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tuglikki</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Uistilrao</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ukaarriit!!b</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Un'k!!k'ng</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ustral Quadrant</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Uuk</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vanguard Reaches</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Verge</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vland</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Waroatahe</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Windhorn</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Wrenton</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>X'kug</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Xaagr</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Yahehwe</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Yiklerzdanzh</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Zao Kfeng Ig Grilokh</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Zarushagar</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Zdiedeiant</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Zhdant</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ziafrplians</string>
        </property>
       </item>
      </widget>
@@ -1563,38 +1973,6 @@
       </property>
       <property name="text">
        <string>Get Planet</string>
-      </property>
-     </widget>
-     <widget class="QProgressBar" name="TravellerMapProgressBar">
-      <property name="geometry">
-       <rect>
-        <x>-3</x>
-        <y>120</y>
-        <width>221</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="value">
-       <number>24</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="invertedAppearance">
-       <bool>false</bool>
-      </property>
-      <property name="textDirection">
-       <enum>QProgressBar::TopToBottom</enum>
-      </property>
-     </widget>
-     <widget class="QTextBrowser" name="TravellerMapPlanetTextDisplay">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>160</y>
-        <width>211</width>
-        <height>61</height>
-       </rect>
       </property>
      </widget>
     </widget>
