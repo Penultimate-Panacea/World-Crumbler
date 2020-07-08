@@ -32,6 +32,11 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.secondSurveyUwp[7] = self.OriginalTechInput.currentText()
         print(self.secondSurveyUwp)
 
+    def api_uwp(self):
+        sector = self.TravellerMapSectorName.currentText()
+        hex = self.TravellerMapHex.currentText()
+
+
 if __name__ == "__main__":
     app = QtWidgets.QApplication(argv)
     window = MyWindow()
