@@ -2,6 +2,7 @@ from decimal import Decimal
 from PyQt5 import QtGui, QtWidgets, uic
 from PyQt5.QtWidgets import QTableWidgetItem
 from sys import exit, argv
+import tmap_gets
 
 #  myappid = 'fantozzi.worldcrumble.1.0'                            #  Currently not needed
 #  windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)  #  Currently not needed
@@ -19,7 +20,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.secondSurveyUwp = ['X', '0', '0', '0', '0', '0', '0', '0']
         self.hardTimesUwp = ['X', '0', '0', '0', '0', '0', '0', '0']
         self.ManualInputPushButton.clicked.connect(self.manual_uwp)
-        #self.subsector_status =
+        self.TravellerMapGetPlanet.clicked.connect(self.api_uwp)
 
     def manual_uwp(self):
         self.secondSurveyUwp[0] = self.OriginalStarportInput.currentText()
@@ -33,9 +34,15 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         print(self.secondSurveyUwp)
 
     def api_uwp(self):
-        sector = self.TravellerMapSectorName.currentText()
-        hex = self.TravellerMapHex.currentText()
-
+        sector = self.TravellerMapSector.currentText()
+        hexagon = self.TravellerMapHex.text()
+        uwp_returned = tmap_gets.get_json(sector, hexagon)["WorldUwp"]
+        uwp_string = uwp_returned.replace('-', '')
+        i = 0
+        for char in uwp_string:
+            self.secondSurveyUwp[i] = char
+            i += 1
+        print(self.secondSurveyUwp)
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(argv)
