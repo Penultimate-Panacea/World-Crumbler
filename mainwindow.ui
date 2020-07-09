@@ -20,7 +20,7 @@
       <x>70</x>
       <y>110</y>
       <width>231</width>
-      <height>371</height>
+      <height>351</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -32,7 +32,7 @@
        <x>0</x>
        <y>0</y>
        <width>231</width>
-       <height>309</height>
+       <height>289</height>
       </rect>
      </property>
      <attribute name="label">
@@ -801,6 +801,15 @@
          <height>25</height>
         </rect>
        </property>
+       <property name="focusPolicy">
+        <enum>Qt::WheelFocus</enum>
+       </property>
+       <property name="editable">
+        <bool>false</bool>
+       </property>
+       <property name="duplicatesEnabled">
+        <bool>false</bool>
+       </property>
        <item>
         <property name="text">
          <string>Ziafrplians</string>
@@ -1162,7 +1171,7 @@
        <x>0</x>
        <y>0</y>
        <width>231</width>
-       <height>309</height>
+       <height>289</height>
       </rect>
      </property>
      <attribute name="label">
@@ -1176,6 +1185,9 @@
         <width>131</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="editable">
+       <bool>false</bool>
       </property>
       <property name="currentIndex">
        <number>0</number>
@@ -1975,13 +1987,28 @@
        <string>Get Planet</string>
       </property>
      </widget>
+     <widget class="QWebView" name="TravellerMapLocalArea">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>120</y>
+        <width>221</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="url">
+       <url>
+        <string>about:blank</string>
+       </url>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>66</y>
+      <y>50</y>
       <width>191</width>
       <height>41</height>
      </rect>
@@ -1991,6 +2018,152 @@
     </property>
     <property name="textFormat">
      <enum>Qt::RichText</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>50</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; font-weight:600;&quot;&gt;Crumble&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CrumbleStage">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>100</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stage One</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CrumbleStage_2">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>140</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stage Two</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CrumbleStage_3">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>180</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stage Three</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CrumbleStage_4">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>220</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stage Four</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CrumbleStage_5">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>260</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stage Five</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CrumbleStage_6">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>300</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stage Six</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CrumbleStage_7">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>340</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stage Seven</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CrumbleStage_8">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>380</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stage Eight</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CrumbleStage_9">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>420</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stage Nine</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CrumbleStage_10">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>460</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stage Ten</string>
     </property>
    </widget>
   </widget>
@@ -2006,6 +2179,13 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header location="global">QtWebKitWidgets/QWebView</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
