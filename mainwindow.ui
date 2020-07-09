@@ -20,7 +20,7 @@
       <x>70</x>
       <y>110</y>
       <width>231</width>
-      <height>451</height>
+      <height>391</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -32,7 +32,7 @@
        <x>0</x>
        <y>0</y>
        <width>231</width>
-       <height>389</height>
+       <height>329</height>
       </rect>
      </property>
      <attribute name="label">
@@ -1171,7 +1171,7 @@
         <cstring>SectorNameInput</cstring>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit">
+      <widget class="QLineEdit" name="PlanetManualInput">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -1198,7 +1198,7 @@
        <x>0</x>
        <y>0</y>
        <width>231</width>
-       <height>389</height>
+       <height>329</height>
       </rect>
      </property>
      <attribute name="label">
@@ -1993,7 +1993,7 @@
        <rect>
         <x>0</x>
         <y>40</y>
-        <width>131</width>
+        <width>91</width>
         <height>17</height>
        </rect>
       </property>
@@ -2027,28 +2027,13 @@
        <string/>
       </property>
      </widget>
-     <widget class="QWebView" name="webView">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>200</y>
-        <width>231</width>
-        <height>181</height>
-       </rect>
-      </property>
-      <property name="url">
-       <url>
-        <string>about:blank</string>
-       </url>
-      </property>
-     </widget>
     </widget>
    </widget>
    <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>50</y>
+      <y>30</y>
       <width>191</width>
       <height>41</height>
      </rect>
@@ -2064,7 +2049,7 @@
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>50</y>
+      <y>30</y>
       <width>191</width>
       <height>41</height>
      </rect>
@@ -2076,141 +2061,11 @@
      <enum>Qt::RichText</enum>
     </property>
    </widget>
-   <widget class="QPushButton" name="CrumbleStage">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>100</y>
-      <width>221</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Stage One</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="CrumbleStage_2">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>140</y>
-      <width>221</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Stage Two</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="CrumbleStage_3">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>180</y>
-      <width>221</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Stage Three</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="CrumbleStage_4">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>220</y>
-      <width>221</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Stage Four</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="CrumbleStage_5">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>260</y>
-      <width>221</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Stage Five</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="CrumbleStage_6">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>300</y>
-      <width>221</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Stage Six</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="CrumbleStage_7">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>340</y>
-      <width>221</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Stage Seven</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="CrumbleStage_8">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>380</y>
-      <width>221</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Stage Eight</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="CrumbleStage_9">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>420</y>
-      <width>221</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Stage Nine</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="CrumbleStage_10">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>460</y>
-      <width>221</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Stage Ten</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_15">
     <property name="geometry">
      <rect>
       <x>710</x>
-      <y>50</y>
+      <y>30</y>
       <width>131</width>
       <height>41</height>
      </rect>
@@ -2222,114 +2077,280 @@
      <enum>Qt::RichText</enum>
     </property>
    </widget>
-   <widget class="QPushButton" name="AutoCrumble">
+   <widget class="QPushButton" name="DataEntryButton">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>500</y>
-      <width>121</width>
-      <height>61</height>
+      <x>70</x>
+      <y>520</y>
+      <width>231</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>AutoCrumble</string>
+     <string>Finish and Lock Data Entry</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="YearComboBox">
+   <widget class="QPushButton" name="UnlockEntryButton">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>530</y>
-      <width>86</width>
-      <height>31</height>
+      <x>70</x>
+      <y>80</y>
+      <width>231</width>
+      <height>25</height>
      </rect>
     </property>
-    <item>
-     <property name="text">
-      <string>1117</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>1118</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>1119</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>1120</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>1121</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>1122</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>1123</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>1124</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>1125</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>1126</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>1127</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>1128</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>1129</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>1130 and beyond</string>
-     </property>
-    </item>
+    <property name="text">
+     <string>Unlock Entry</string>
+    </property>
    </widget>
-   <widget class="QSpinBox" name="DateSpinBox">
+   <widget class="QWidget" name="CrumbleWidget" native="true">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>500</y>
-      <width>81</width>
-      <height>26</height>
+      <x>370</x>
+      <y>80</y>
+      <width>241</width>
+      <height>491</height>
      </rect>
     </property>
-    <property name="minimum">
-     <number>1</number>
-    </property>
-    <property name="maximum">
-     <number>365</number>
-    </property>
+    <widget class="QPushButton" name="CrumbleStage_1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stage One</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="CrumbleStage_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stage Two</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="CrumbleStage_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stage Three</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="CrumbleStage_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stage Four</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="CrumbleStage_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>170</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stage Five</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="CrumbleStage_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>210</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stage Six</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="CrumbleStage_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>250</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stage Seven</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="CrumbleStage_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>290</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stage Eight</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="CrumbleStage_9">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>330</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stage Nine</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="CrumbleStage_10">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>370</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stage Ten</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="AutoCrumble">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>410</y>
+       <width>121</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>AutoCrumble</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="YearComboBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>450</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>1117</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1118</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1119</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1120</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1121</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1122</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1123</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1124</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1125</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1126</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1127</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1128</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1129</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1130 and beyond</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QSpinBox" name="DateSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>410</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>365</number>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -2344,13 +2365,6 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>QWebView</class>
-   <extends>QWidget</extends>
-   <header location="global">QtWebKitWidgets/QWebView</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

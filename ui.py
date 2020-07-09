@@ -1,5 +1,6 @@
 from PyQt5 import QtGui, QtWidgets, uic
 from sys import exit, argv
+from diceroller import DiceRoller
 import tmap_gets
 
 # myappid = 'fantozzi.worldcrumble.1.0'                            #  Currently not needed
@@ -19,22 +20,14 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.sectorName = "Test Sector Name"
         self.worldName = "Test World Name"
         self.hexagon = 9999
-        self.dice_seed = None
+        self.dice = None
         self.secondSurveyUwp = ['X', '0', '0', '0', '0', '0', '0', '0']
         self.hardTimesUwp = ['X', '0', '0', '0', '0', '0', '0', '0']
         self.ManualInputPushButton.clicked.connect(self.manual_uwp)
         self.TravellerMapGetPlanet.clicked.connect(self.api_uwp)
-        self.CrumbleStage_1.clicked.connect(self.crumble1)
-        self.CrumbleStage_2.clicked.connect(self.crumble2)
-        self.CrumbleStage_3.clicked.connect(self.crumble3)
-        self.CrumbleStage_4.clicked.connect(self.crumble4)
-        self.CrumbleStage_5.clicked.connect(self.crumble5)
-        self.CrumbleStage_6.clicked.connect(self.crumble6)
-        self.CrumbleStage_7.clicked.connect(self.crumble7)
-        self.CrumbleStage_8.clicked.connect(self.crumble8)
-        self.CrumbleStage_9.clicked.connect(self.crumble9)
-        self.CrumbleStage_10.clicked.connect(self.crumble10)
-        self.AutoCrumble.clicked.connect(self.auto_crumble)
+        self.DataEntryButton.clicked.connect(self.finalize_input)
+        self.UnlockEntryButton.clicked.connect(self.unlock_input)
+        self.CrumbleWidget.setDisabled(True)
 
     def manual_uwp(self):
         self.secondSurveyUwp[0] = self.OriginalStarportInput.currentText()
@@ -47,8 +40,6 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.secondSurveyUwp[7] = self.OriginalTechInput.currentText()
         self.sectorName = self.SectorNameInput.currentText()
         self.worldName = self.PlanetManualInput.text()
-        self.dice_seed = self.sectorName+self.worldName
-        self.hardTimesUwp = self.secondSurveyUwp
 
     def api_uwp(self):
         self.sectorName = self.TravellerMapSector.currentText()
@@ -64,9 +55,17 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         world_string = "Sector:" + world["SectorName"] + "\nSubsector:" + world["SubsectorName"] + "\nWorld:" + \
                        world["WorldName"] + "\nUWP:" + uwp_returned
         self.ReturnedAPILabel.setText(world_string)
-        self.dice_seed = self.sectorName + self.worldName
-        self.hardTimesUwp = self.secondSurveyUwp
 
+    def finalize_input(self):
+        dice_seed = self.sectorName + self.worldName
+        self.dice = DiceRoller(dice_seed)
+        self.hardTimesUwp = self.secondSurveyUwp
+        self.toolBox.setDisabled(True)
+        self.CrumbleWidget.setDisabled(False)
+
+    def unlock_input(self):
+        self.toolBox.setDisabled(False)
+        self.CrumbleWidget.setDisabled(True)
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(argv)
