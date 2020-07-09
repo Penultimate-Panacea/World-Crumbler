@@ -18,16 +18,21 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setFixedSize(1000, 640)
         self.setupUi(self)
         self.sectorName = "Test Sector Name"
+        self.historyString = ""
         self.worldName = "Test World Name"
         self.hexagon = 9999
-        self.dice = None
+        self.dice = DiceRoller
+        self.stageThreeTLBuffer = 0
         self.secondSurveyUwp = ['X', '0', '0', '0', '0', '0', '0', '0']
         self.hardTimesUwp = ['X', '0', '0', '0', '0', '0', '0', '0']
+        self.warzoneStatus = None # TODO safe, warzone, intense, black ['S', 'W', 'I', 'B']
+        self.areaStatus = None  # TODO determine frontier, safe, outland, wild areas  ['F', 'S', 'O', 'W']
         self.ManualInputPushButton.clicked.connect(self.manual_uwp)
         self.TravellerMapGetPlanet.clicked.connect(self.api_uwp)
         self.DataEntryButton.clicked.connect(self.finalize_input)
         self.UnlockEntryButton.clicked.connect(self.unlock_input)
         self.CrumbleWidget.setDisabled(True)
+        self.CrumbleStage_1a.clicked.connect(self.crumble1a)
 
     def manual_uwp(self):
         self.secondSurveyUwp[0] = self.OriginalStarportInput.currentText()
@@ -66,6 +71,60 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def unlock_input(self):
         self.toolBox.setDisabled(False)
         self.CrumbleWidget.setDisabled(True)
+
+    def crumble1a(self):
+        warzone_dicemods = {'S': 0, 'W': 1, 'I': 2, 'B': 3}
+        dice_modifier = 0
+        if self.secondSurveyUwp[0] == "A":
+            dice_modifier += 1
+        if self.secondSurveyUwp[4] > '8':
+            dice_modifier += 1
+        dice_modifier += warzone_dicemods[self.warzoneStatus]
+        roll = self.dice.roll_2d6() + dice_modifier
+        if self.warzoneStatus == 'S':
+            roll = 0
+        if roll > 13:
+            self.historyString += "Biosphere Damage\n"
+            self.hardTimesUwp[0] = "X"
+            if self.warzoneStatus == 'B':
+                damage_roll = self.dice.roll_2d6() + 2
+            else:
+                damage_roll = self.dice.roll_2d6()
+            if damage_roll < 4:
+                years = self.dice.roll_1d6()
+                self.historyString += "Average planetary temperature decreases for the next %d years\n" % years
+            elif damage_roll < 6:
+                temperature_decrease = self.dice.roll_1d6()+6
+                self.historyString += "Permanent planetary temperature decrease of %d Kelvin" % temperature_decrease
+            elif damage_roll < 9:
+                taint_shift = {'5': '4', '7': '6', '9': '8'}
+                try:
+                    self.hardTimesUwp[2] = taint_shift[self.hardTimesUwp[2]]
+                except KeyError:
+                    pass
+                self.historyString += "Atmosphere Tainted\n"
+            elif damage_roll < 11:
+                taint_shift = {'3': '2', '5': '4', '7': '6', '9': '8'}
+                self.stageThreeTLBuffer += 3
+                try:
+                    self.hardTimesUwp[2] = taint_shift[self.hardTimesUwp[2]]
+                except KeyError:
+                    pass
+                self.hardTimesUwp[4] -= 1
+                self.historyString += "Atmosphere Tainted, leading to population loss\n"
+            elif damage_roll < 13:
+                self.hardTimesUwp[2] = "C"
+                self.stageThreeTLBuffer += 6
+                self.hardTimesUwp[4] -= 2
+                self.historyString += "Atmosphere Insidious, leading to population loss\n"
+            elif damage_roll >= 13:
+                self.hardTimesUwp[2] = 'C'
+                self.hardTimesUwp[4] = '0'
+                self.hardTimesUwp[5] = '0'
+                self.hardTimesUwp[6] = '0'
+                self.hardTimesUwp[7] = '0'
+                self.historyString += "World Annihilated\n"
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(argv)

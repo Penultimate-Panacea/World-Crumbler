@@ -59,8 +59,8 @@
       <widget class="QComboBox" name="OriginalStarportInput">
        <property name="geometry">
         <rect>
-         <x>130</x>
-         <y>90</y>
+         <x>150</x>
+         <y>100</y>
          <width>41</width>
          <height>25</height>
         </rect>
@@ -117,8 +117,8 @@
       <widget class="QComboBox" name="OriginalSizeInput">
        <property name="geometry">
         <rect>
-         <x>130</x>
-         <y>110</y>
+         <x>150</x>
+         <y>120</y>
          <width>41</width>
          <height>25</height>
         </rect>
@@ -182,8 +182,8 @@
       <widget class="QComboBox" name="OriginalAtmosphereInput">
        <property name="geometry">
         <rect>
-         <x>130</x>
-         <y>130</y>
+         <x>150</x>
+         <y>140</y>
          <width>41</width>
          <height>25</height>
         </rect>
@@ -247,8 +247,8 @@
       <widget class="QComboBox" name="OriginalHydrosphereInput">
        <property name="geometry">
         <rect>
-         <x>130</x>
-         <y>150</y>
+         <x>150</x>
+         <y>160</y>
          <width>41</width>
          <height>25</height>
         </rect>
@@ -312,8 +312,8 @@
       <widget class="QComboBox" name="OriginalPopulationInput">
        <property name="geometry">
         <rect>
-         <x>130</x>
-         <y>170</y>
+         <x>150</x>
+         <y>180</y>
          <width>41</width>
          <height>25</height>
         </rect>
@@ -377,8 +377,8 @@
       <widget class="QComboBox" name="OriginalGovernmentInput">
        <property name="geometry">
         <rect>
-         <x>130</x>
-         <y>190</y>
+         <x>150</x>
+         <y>200</y>
          <width>41</width>
          <height>25</height>
         </rect>
@@ -445,8 +445,8 @@
       <widget class="QComboBox" name="OriginalLawInput">
        <property name="geometry">
         <rect>
-         <x>130</x>
-         <y>210</y>
+         <x>150</x>
+         <y>220</y>
          <width>41</width>
          <height>25</height>
         </rect>
@@ -510,8 +510,8 @@
       <widget class="QComboBox" name="OriginalTechInput">
        <property name="geometry">
         <rect>
-         <x>130</x>
-         <y>230</y>
+         <x>150</x>
+         <y>240</y>
          <width>41</width>
          <height>25</height>
         </rect>
@@ -680,6 +680,9 @@
        <property name="text">
         <string>Tech Level</string>
        </property>
+       <property name="buddy">
+        <cstring>OriginalTechInput</cstring>
+       </property>
       </widget>
       <widget class="QLabel" name="label_8">
        <property name="geometry">
@@ -700,8 +703,8 @@
       <widget class="QPushButton" name="ManualInputPushButton">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>260</y>
+         <x>30</x>
+         <y>300</y>
          <width>161</width>
          <height>31</height>
         </rect>
@@ -729,8 +732,8 @@
       <widget class="QComboBox" name="SubsectorLetterInput">
        <property name="geometry">
         <rect>
-         <x>130</x>
-         <y>70</y>
+         <x>150</x>
+         <y>80</y>
          <width>41</width>
          <height>25</height>
         </rect>
@@ -819,7 +822,7 @@
       <widget class="QComboBox" name="SectorNameInput">
        <property name="geometry">
         <rect>
-         <x>90</x>
+         <x>120</x>
          <y>50</y>
          <width>101</width>
          <height>25</height>
@@ -1198,7 +1201,7 @@
        <x>0</x>
        <y>0</y>
        <width>231</width>
-       <height>329</height>
+       <height>349</height>
       </rect>
      </property>
      <attribute name="label">
