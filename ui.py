@@ -30,7 +30,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.secondSurveyUwp[5] = self.OriginalGovernmentInput.currentText()
         self.secondSurveyUwp[6] = self.OriginalLawInput.currentText()
         self.secondSurveyUwp[7] = self.OriginalTechInput.currentText()
-        print(self.secondSurveyUwp)
+        self.hardTimesUwp = self.secondSurveyUwp
 
     def api_uwp(self):
         sector = self.TravellerMapSector.currentText()
@@ -43,7 +43,10 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.secondSurveyUwp[i] = char
             i += 1
         print(self.secondSurveyUwp)
-        self.TravellerMapPlanetTextDisplay
+        world_string = "Sector:" + world["SectorName"] + "\nSubsector:" + world["SubsectorName"] + "\nWorld:" + \
+                       world["WorldName"] + "\nUWP:" + uwp_returned
+        self.ReturnedAPILabel.setText(world_string)
+        self.hardTimesUwp = self.secondSurveyUwp
 
 
 if __name__ == "__main__":
