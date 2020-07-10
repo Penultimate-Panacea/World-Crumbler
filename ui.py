@@ -174,21 +174,21 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         reduction = self.degrees_of_change_dict[crumble_roll]
         if reduction == -1:
             self.hardTimesUwp[0] = 'B'
-            self.historyString += "The Starport fell from a class A one to a class B one"
+            self.historyString += "The Starport fell from a class A one to a class B one\n"
         elif reduction == -2:
             self.hardTimesUwp[0] = 'C'
-            self.historyString += "The Starport fell from a class A one to a class C one"
+            self.historyString += "The Starport fell from a class A one to a class C one\n"
         elif reduction == -3:
             self.hardTimesUwp[0] = 'D'
-            self.historyString += "The Starport fell from a class A one to a class D one"
+            self.historyString += "The Starport fell from a class A one to a class D one\n"
         elif reduction == -4:
             self.hardTimesUwp[0] = 'E'
-            self.historyString += "The Starport fell from a class A one to a class E one"
+            self.historyString += "The Starport fell from a class A one to a class E one\n"
         elif reduction == 0:
             self.hardTimesUwp[0] = 'A'
         else:
             self.hardTimesUwp[0] = 'X'
-            self.historyString += "The Starport fell from a class A and crumbled to nothing, not even a landing beacon"
+            self.historyString += "The Starport fell from a class A and crumbled to nothing, not even a landing beacon\n"
 
     def crumble1b_mode_b(self):
         dicemod = 0
@@ -216,18 +216,18 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         reduction = self.degrees_of_change_dict[crumble_roll]
         if reduction == -1:
             self.hardTimesUwp[0] = 'C'
-            self.historyString += "The Starport fell from a class B one to a class C one"
+            self.historyString += "The Starport fell from a class B one to a class C one\n"
         elif reduction == -2:
             self.hardTimesUwp[0] = 'D'
-            self.historyString += "The Starport fell from a class B one to a class D one"
+            self.historyString += "The Starport fell from a class B one to a class D one\n"
         elif reduction == -3:
             self.hardTimesUwp[0] = 'E'
-            self.historyString += "The Starport fell from a class B one to a class E one"
+            self.historyString += "The Starport fell from a class B one to a class E one\n"
         elif reduction == 0:
             self.hardTimesUwp[0] = 'B'
         else:
             self.hardTimesUwp[0] = 'X'
-            self.historyString += "The Starport fell from a class B and crumbled to nothing, not even a landing beacon"
+            self.historyString += "The Starport fell from a class B and crumbled to nothing, not even a landing beacon\n"
 
     def crumble1b_mode_c(self):
         dicemod = 0
@@ -251,15 +251,15 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         reduction = self.degrees_of_change_dict[crumble_roll]
         if reduction == -1:
             self.hardTimesUwp[0] = 'D'
-            self.historyString += "The Starport fell from a class C one to a class D one"
+            self.historyString += "The Starport fell from a class C one to a class D one\n"
         elif reduction == -2:
             self.hardTimesUwp[0] = 'E'
-            self.historyString += "The Starport fell from a class C one to a class E one"
+            self.historyString += "The Starport fell from a class C one to a class E one\n"
         elif reduction == 0:
             self.hardTimesUwp[0] = 'C'
         else:
             self.hardTimesUwp[0] = 'X'
-            self.historyString += "The Starport fell from a class C and crumbled to nothing, not even a landing beacon"
+            self.historyString += "The Starport fell from a class C and crumbled to nothing, not even a landing beacon\n"
 
     def crumble1b_mode_d(self):
         dicemod = 0
@@ -277,12 +277,71 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         reduction = self.degrees_of_change_dict[crumble_roll]
         if reduction == -1:
             self.hardTimesUwp[0] = 'E'
-            self.historyString += "The Starport fell from a class D one to a class E one"
+            self.historyString += "The Starport fell from a class D one to a class E one\n"
         elif reduction == 0:
             self.hardTimesUwp[0] = 'D'
         else:
             self.hardTimesUwp[0] = 'X'
-            self.historyString += "The Starport fell from a class D and crumbled to nothing, not even a landing beacon"
+            self.historyString += "The Starport fell from a class D and crumbled to nothing, not even a landing beacon\n"
+
+    def crumble3(self):
+        dicemod = 0
+        if self.hardTimesUwp[0] == 'B':
+            dicemod += 1
+        elif self.hardTimesUwp[0] == 'C':
+            dicemod += 2
+        elif self.hardTimesUwp[0] == 'D':
+            dicemod += 3
+        elif self.hardTimesUwp[0] == 'E':
+            dicemod += 4
+        elif self.hardTimesUwp[0] == 'X':
+            dicemod += 5
+        if self.hardTimesUwp[2] < 4 or 10 or 11:
+            dicemod += 1
+        elif self.hardTimesUwp[2] == 12:
+            dicemod += 2
+        if self.hardTimesUwp[3] == 0 or 1 or 10:
+            dicemod += 1
+        if self.hardTimesUwp[2] > 9 and self.hardTimesUwp[3] > 1:  # Test for non-water fluid
+            dicemod += 1
+        if self.hardTimesUwp[4] < 5:
+            dicemod += 4
+        elif self.hardTimesUwp[4] == 5:
+            dicemod += 2
+        elif self.hardTimesUwp[4] == 6:
+            dicemod += 1
+        if self.hardTimesUwp[5] == 5 or 6:
+            dicemod -= 1
+        elif self.hardTimesUwp[5] == 0 or 2 or 3 or 7:
+            dicemod += 1
+        elif self.hardTimesUwp[5] > 10:
+            dicemod += 1
+        if self.secondSurveyUwp[7] == 1:
+            dicemod -= 10
+        elif self.secondSurveyUwp[7] == 2:
+            dicemod -= 8
+        elif self.secondSurveyUwp[7] == 3:
+            dicemod -= 6
+        elif self.secondSurveyUwp[7] == 4 or 5:
+            dicemod -= 4
+        elif self.secondSurveyUwp[7] == 6 or 7:
+            dicemod -= 2
+        elif self.secondSurveyUwp[7] == 10 or 11:
+            dicemod += 1
+        elif self.secondSurveyUwp[7] == 12 or 13:
+            dicemod += 3
+        elif self.secondSurveyUwp[7] == 14 or 15:
+            dicemod += 5
+        elif self.secondSurveyUwp[7] == 16:
+            dicemod += 7
+        if self.areaStatus == 'O':
+            dicemod += 1
+        elif self.areaStatus == 'W':
+            dicemod += 3
+        crumble_roll = self.dice.roll_1d6() + dicemod
+        reduction = self.degrees_of_change_dict[crumble_roll]
+        self.hardTimesUwp[7] = self.secondSurveyUwp[7] + reduction
+        self.historyString += "The planets tech level fell from %d to %d during the recession\n" % (self.secondSurveyUwp[7], self.hardTimesUwp[7])
 
 
 if __name__ == "__main__":
