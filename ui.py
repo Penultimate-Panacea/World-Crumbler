@@ -129,16 +129,43 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def crumble1b(self):
         if self.secondSurveyUwp[0] == 'A':
-            self.crumble1b_modeA()
+            self.crumble1b_mode_a()
         elif self.secondSurveyUwp[0] == 'B':
-            self.crumble1b_modeB()
+            self.crumble1b_mode_b()
         elif self.secondSurveyUwp[0] == 'C':
-            self.crumble1b_modeC()
+            self.crumble1b_mode_c()
         elif self.secondSurveyUwp[0] == 'D':
-            self.crumble1b_modeD()
+            self.crumble1b_mode()
         else:
             self.hardTimesUwp[0] = self.secondSurveyUwp[0]
 
+    def crumble1b_mode_a(self):
+        dicemod = 0
+        if self.areaStatus == 'F':
+            dicemod += 2
+        elif self.areaStatus == 'O' or 'W':
+            dicemod += 3
+        if self.warzoneStatus == 'W':
+            dicemod += 1
+        elif self.warzoneStatus == 'I':
+            dicemod += 2
+        elif self.warzoneStatus == 'B':
+            dicemod += 3
+        if self.isIsolated:
+            dicemod += 2
+        if self.secondSurveyUwp[4] == '0' or '1' or '2':
+            dicemod += 2
+        elif self.secondSurveyUwp[4] == '3' or '4':
+            dicemod += 1
+        if self.secondSurveyUwp[7] == '0' or '1' or '2' or '3' or '4':
+            dicemod += 8
+        elif self.secondSurveyUwp[7] == '5' or '6':
+            dicemod += 5
+        elif self.secondSurveyUwp[7] == '7' or '8':
+            dicemod += 3
+        elif self.secondSurveyUwp[7] == '9' or 'A':
+            dicemod += 1
+        crumble_roll = self.dice.roll_1d6() + dicemod
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(argv)
