@@ -191,6 +191,39 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             dicemod += 1
         crumble_roll = self.dice.roll_1d6() + dicemod
 
+    def crumble1b_mode_c(self):
+        dicemod = 0
+        if self.areaStatus == 'O':
+            dicemod += 1
+        elif self.areaStatus == 'W':
+            dicemod += 2
+        if self.warzoneStatus == 'W' or 'I':
+            dicemod += 1
+        elif self.warzoneStatus == 'B':
+            dicemod += 2
+        if self.isIsolated:
+            dicemod += 4
+        if self.secondSurveyUwp[4] == '0' or '1' or '2':
+            dicemod += 1
+        if self.secondSurveyUwp[7] == '0' or '1' or '2' or '3' or '4':
+            dicemod += 5
+        elif self.secondSurveyUwp[7] == '5' or '6':
+            dicemod += 3
+        crumble_roll = self.dice.roll_1d6() + dicemod
+
+    def crumble1b_mode_d(self):
+        dicemod = 0
+        if self.areaStatus == 'W':
+            dicemod += 1
+        if self.warzoneStatus == 'B':
+            dicemod += 1
+        if self.isIsolated:
+            dicemod += 1
+        if self.secondSurveyUwp[7] == '0' or '1' or '2' or '3' or '4':
+            dicemod += 3
+        elif self.secondSurveyUwp[7] == '5' or '6':
+            dicemod += 1
+        crumble_roll = self.dice.roll_1d6() + dicemod
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(argv)
