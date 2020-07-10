@@ -35,6 +35,9 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.CrumbleWidget.setDisabled(True)
         self.CrumbleStage_1a.clicked.connect(self.crumble1a)
         self.CrumbleStage_1b.clicked.connect(self.crumble1b())
+        self.degrees_of_change_dict = {1: 0, 2: 0, 3: 0, 4: 0, 5: -1, 6: -1, 7: -2, 8: -2, 9: -3, 10: -3, 11: -4,
+                                       12: -4, 13: -5, 14: -5, 15: -6, 16: -6, 17: -7, 18: -7, 19: -8, 20: -8, 21: -9,
+                                       22: -9, 23: -10, 24: -10, 25: -11, 26: -11, 27: -12, 28: -12, 29: -13, 30: -13}
 
     def manual_uwp(self):
         self.secondSurveyUwp[0] = self.OriginalStarportInput.currentText()
@@ -168,6 +171,24 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         elif self.secondSurveyUwp[7] == 9 or 10:
             dicemod += 1
         crumble_roll = self.dice.roll_1d6() + dicemod
+        reduction = self.degrees_of_change_dict[crumble_roll]
+        if reduction == -1:
+            self.hardTimesUwp[0] = 'B'
+            self.historyString += "The Starport fell from a class A one to a class B one"
+        elif reduction == -2:
+            self.hardTimesUwp[0] = 'C'
+            self.historyString += "The Starport fell from a class A one to a class C one"
+        elif reduction == -3:
+            self.hardTimesUwp[0] = 'D'
+            self.historyString += "The Starport fell from a class A one to a class D one"
+        elif reduction == -4:
+            self.hardTimesUwp[0] = 'E'
+            self.historyString += "The Starport fell from a class A one to a class E one"
+        elif reduction == 0:
+            self.hardTimesUwp[0] = 'A'
+        else:
+            self.hardTimesUwp[0] = 'X'
+            self.historyString += "The Starport fell from a class A and crumbled to nothing, not even a landing beacon"
 
     def crumble1b_mode_b(self):
         dicemod = 0
@@ -192,6 +213,21 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         elif self.secondSurveyUwp[7] == 7 or 8:
             dicemod += 1
         crumble_roll = self.dice.roll_1d6() + dicemod
+        reduction = self.degrees_of_change_dict[crumble_roll]
+        if reduction == -1:
+            self.hardTimesUwp[0] = 'C'
+            self.historyString += "The Starport fell from a class B one to a class C one"
+        elif reduction == -2:
+            self.hardTimesUwp[0] = 'D'
+            self.historyString += "The Starport fell from a class B one to a class D one"
+        elif reduction == -3:
+            self.hardTimesUwp[0] = 'E'
+            self.historyString += "The Starport fell from a class B one to a class E one"
+        elif reduction == 0:
+            self.hardTimesUwp[0] = 'B'
+        else:
+            self.hardTimesUwp[0] = 'X'
+            self.historyString += "The Starport fell from a class B and crumbled to nothing, not even a landing beacon"
 
     def crumble1b_mode_c(self):
         dicemod = 0
@@ -212,6 +248,18 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         elif self.secondSurveyUwp[7] == 5 or 6:
             dicemod += 3
         crumble_roll = self.dice.roll_1d6() + dicemod
+        reduction = self.degrees_of_change_dict[crumble_roll]
+        if reduction == -1:
+            self.hardTimesUwp[0] = 'D'
+            self.historyString += "The Starport fell from a class C one to a class D one"
+        elif reduction == -2:
+            self.hardTimesUwp[0] = 'E'
+            self.historyString += "The Starport fell from a class C one to a class E one"
+        elif reduction == 0:
+            self.hardTimesUwp[0] = 'C'
+        else:
+            self.hardTimesUwp[0] = 'X'
+            self.historyString += "The Starport fell from a class C and crumbled to nothing, not even a landing beacon"
 
     def crumble1b_mode_d(self):
         dicemod = 0
@@ -226,6 +274,16 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         elif self.secondSurveyUwp[7] == 5 or 6:
             dicemod += 1
         crumble_roll = self.dice.roll_1d6() + dicemod
+        reduction = self.degrees_of_change_dict[crumble_roll]
+        if reduction == -1:
+            self.hardTimesUwp[0] = 'E'
+            self.historyString += "The Starport fell from a class D one to a class E one"
+        elif reduction == 0:
+            self.hardTimesUwp[0] = 'D'
+        else:
+            self.hardTimesUwp[0] = 'X'
+            self.historyString += "The Starport fell from a class D and crumbled to nothing, not even a landing beacon"
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(argv)
