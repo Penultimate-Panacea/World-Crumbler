@@ -27,12 +27,14 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.hardTimesUwp = ['X', '0', '0', '0', '0', '0', '0', '0']
         self.warzoneStatus = None # TODO safe, warzone, intense, black ['S', 'W', 'I', 'B']
         self.areaStatus = None  # TODO determine frontier, safe, outland, wild areas  ['F', 'S', 'O', 'W']
+        self.isIsolated = False
         self.ManualInputPushButton.clicked.connect(self.manual_uwp)
         self.TravellerMapGetPlanet.clicked.connect(self.api_uwp)
         self.DataEntryButton.clicked.connect(self.finalize_input)
         self.UnlockEntryButton.clicked.connect(self.unlock_input)
         self.CrumbleWidget.setDisabled(True)
         self.CrumbleStage_1a.clicked.connect(self.crumble1a)
+        self.CrumbleStage_1b.clicked.connect(self.crumble1b())
 
     def manual_uwp(self):
         self.secondSurveyUwp[0] = self.OriginalStarportInput.currentText()
@@ -124,6 +126,18 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 self.hardTimesUwp[6] = '0'
                 self.hardTimesUwp[7] = '0'
                 self.historyString += "World Annihilated\n"
+
+    def crumble1b(self):
+        if self.secondSurveyUwp[0] == 'A':
+            self.crumble1b_modeA()
+        elif self.secondSurveyUwp[0] == 'B':
+            self.crumble1b_modeB()
+        elif self.secondSurveyUwp[0] == 'C':
+            self.crumble1b_modeC()
+        elif self.secondSurveyUwp[0] == 'D':
+            self.crumble1b_modeD()
+        else:
+            self.hardTimesUwp[0] = self.secondSurveyUwp[0]
 
 
 if __name__ == "__main__":
