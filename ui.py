@@ -23,6 +23,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.hexagon = 9999
         self.dice = DiceRoller
         self.stageThreeTLBuffer = 0
+        self.biosphereDamage = False
         self.secondSurveyUwp = ['X', 0, 0, 0, 0, 0, 0, 0]
         self.hardTimesUwp = ['X', 0, 0, 0, 0, 0, 0, 0]
         self.warzoneStatus = 'S'  # TODO safe, warzone, intense, black ['S', 'W', 'I', 'B']
@@ -94,6 +95,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             roll = 0
         if roll > 13:
             self.historyString += "Biosphere Damage\n"
+            self.biosphereDamage = True
             self.hardTimesUwp[0] = "X"
             if self.warzoneStatus == 'B':
                 damage_roll = self.dice.roll_2d6() + 2
@@ -344,10 +346,41 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         reduction = self.degrees_of_change_dict[crumble_roll]
         self.hardTimesUwp[7] = self.secondSurveyUwp[7] + reduction
         self.historyString += "The planets tech level fell from %d to %d during the recession\n" % (
-        self.secondSurveyUwp[7], self.hardTimesUwp[7])
+            self.secondSurveyUwp[7], self.hardTimesUwp[7])
 
     def crumble6a(self):
-        pass
+        dicemod = 0
+        if self.biosphereDamage:
+            dicemod += 1
+        if self.hardTimesUwp[2] < 2:
+            dicemod += 1
+        if self.hardTimesUwp[3] < 2:
+            dicemod += 1
+        if self.hardTimesUwp[2] > 9 and self.hardTimesUwp[3] > 2:  # Fluid
+            dicemod += 1
+        if self.hardTimesUwp[4] < 3:
+            dicemod -= 1
+        elif 6 <= self.hardTimesUwp[4] <= 8:
+            dicemod += 1
+        elif self.hardTimesUwp[4] > 8:
+            dicemod += 2
+        if self.areaStatus == 'O':
+            dicemod += 1
+        elif self.areaStatus == 'W':
+            dicemod += 2
+        a_decrease_dict = {'B': 1, 'C': 2, 'D': 3, 'E': 4, 'X': 5}
+        b_decrease_dict = {'C': 1, 'D': 2, 'E': 3, 'X': 4}
+        c_decrease_dict = {'D': 1, 'E': 2, 'X': 3}
+        d_decrease_dict = {'E': 1, 'X': 2}
+        e_decrease_dict = {'X': 1}
+        starport_decrease_dict = {'A': a_decrease_dict, 'B': b_decrease_dict, 'C': c_decrease_dict,
+                                  'D': d_decrease_dict, 'E': e_decrease_dict}
+        dicemod += starport_decrease_dict[self.secondSurveyUwp[0]][self.hardTimesUwp[0]]
+        crumble_roll = self.dice.roll_1d6() + dicemod
+        reduction = self.degrees_of_change_dict[crumble_roll]
+        increase = abs(reduction)  # Law level increases for visitors
+        self.hardTimesUwp[6] += increase
+        self.historyString += "The society became more xenophobic, with the law level for visitors increasing to %d" % increase
 
 
 if __name__ == "__main__":
