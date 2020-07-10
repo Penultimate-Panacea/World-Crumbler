@@ -29,6 +29,8 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.warzoneStatus = 'S'  # TODO safe, warzone, intense, black ['S', 'W', 'I', 'B']
         self.areaStatus = 'S'  # TODO determine frontier, safe, outland, wild areas  ['F', 'S', 'O', 'W']
         self.isIsolated = False
+        self.isFailing = False
+        self.isDoomed = False
         self.ManualInputPushButton.clicked.connect(self.manual_uwp)
         self.TravellerMapGetPlanet.clicked.connect(self.api_uwp)
         self.DataEntryButton.clicked.connect(self.finalize_input)
@@ -421,6 +423,109 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.historyString += "The world has not fallen into abject isolationism, a double standard law level is" \
                                   " at the Referee's discretion\n"
 
+    def crumble8(self):
+        dicemod = 2
+        tech_band = [self.crumble8_tech_band_1(), self.crumble8_tech_band_1(), self.crumble8_tech_band_1(),
+                     self.crumble8_tech_band_2(), self.crumble8_tech_band_3(), self.crumble8_tech_band_4(),
+                     self.crumble8_tech_band_4(), self.crumble8_tech_band_5(), self.crumble8_tech_band_5()]
+        try:
+            enivronmental_dicemod = tech_band[self.hardTimesUwp[7]]
+        except KeyError:
+            enivronmental_dicemod = 0
+        if enivronmental_dicemod > 4:
+            self.isDoomed = True
+        elif enivronmental_dicemod > 1:
+            self.isFailing = True
+
+
+        crumble_roll = self.dice.roll_1d6() + dicemod
+        reduction = self.degrees_of_change_dict[crumble_roll]
+
+    def crumble8_tech_band_1(self):
+        dicemod = 0
+        if self.hardTimesUwp[2] == 12:
+            dicemod += 5
+        elif self.hardTimesUwp[2] == 0 or 1 or 10 or 11:
+            dicemod += 5
+        elif self.hardTimesUwp[2] == 2:
+            dicemod += 5
+        elif self.hardTimesUwp[2] == 3:
+            dicemod += 5
+        elif self.hardTimesUwp[2] == 4 or 7 or 9:
+            dicemod += 3
+        if self.hardTimesUwp[3] == 0:
+            dicemod += 5
+        elif self.hardTimesUwp[3] == 1:
+            dicemod += 3
+        elif self.hardTimesUwp[3] == 2 or 10:
+            dicemod += 2
+        if self.hardTimesUwp[3] > 1 and self.hardTimesUwp[2] > 9:
+            dicemod += 5
+        return dicemod
+
+    def crumble8_tech_band_2(self):
+        dicemod = 0
+        if self.hardTimesUwp[2] == 12:
+            dicemod += 5
+        elif self.hardTimesUwp[2] == 0 or 1 or 10 or 11:
+            dicemod += 5
+        elif self.hardTimesUwp[2] == 2:
+            dicemod += 4
+        elif self.hardTimesUwp[2] == 3:
+            dicemod += 3
+        elif self.hardTimesUwp[2] == 4 or 7 or 9:
+            dicemod += 2
+        if self.hardTimesUwp[3] == 0:
+            dicemod += 4
+        elif self.hardTimesUwp[3] == 1:
+            dicemod += 2
+        elif self.hardTimesUwp[3] == 2 or 10:
+            dicemod += 1
+        if self.hardTimesUwp[3] > 1 and self.hardTimesUwp[2] > 9:
+            dicemod += 3
+        return dicemod
+
+    def crumble8_tech_band_3(self):
+        dicemod = 0
+        if self.hardTimesUwp[2] == 12:
+            dicemod += 4
+        elif self.hardTimesUwp[2] == 0 or 1 or 10 or 11:
+            dicemod += 2
+        elif self.hardTimesUwp[2] == 2:
+            dicemod += 2
+        elif self.hardTimesUwp[2] == 3:
+            dicemod += 2
+        elif self.hardTimesUwp[2] == 4 or 7 or 9:
+            dicemod += 1
+        if self.hardTimesUwp[3] == 0:
+            dicemod += 2
+        elif self.hardTimesUwp[3] == 1:
+            dicemod += 1
+        if self.hardTimesUwp[3] > 1 and self.hardTimesUwp[2] > 9:
+            dicemod += 2
+        return dicemod
+
+    def crumble8_tech_band_4(self):
+        dicemod = 0
+        if self.hardTimesUwp[2] == 12:
+            dicemod += 2
+        elif self.hardTimesUwp[2] == 0 or 1 or 10 or 11:
+            dicemod += 1
+        elif self.hardTimesUwp[2] == 2:
+            dicemod += 1
+        elif self.hardTimesUwp[2] == 3:
+            dicemod += 1
+        if self.hardTimesUwp[3] == 0:
+            dicemod += 1
+        if self.hardTimesUwp[3] > 1 and self.hardTimesUwp[2] > 9:
+            dicemod += 1
+        return dicemod
+
+    def crumble8_tech_band_5(self):
+        dicemod = 0
+        if self.hardTimesUwp[2] == 12:
+            dicemod += 1
+        return  dicemod
 
 
 if __name__ == "__main__":
