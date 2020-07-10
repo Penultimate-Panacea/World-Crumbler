@@ -194,7 +194,8 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.hardTimesUwp[0] = 'A'
         else:
             self.hardTimesUwp[0] = 'X'
-            self.historyString += "The Starport fell from a class A and crumbled to nothing, not even a landing beacon\n"
+            self.historyString += "The Starport fell from a class A and crumbled to nothing, not even a " \
+                                  "landing beacon\n"
 
     def crumble1b_mode_b(self):
         dicemod = 0
@@ -233,7 +234,8 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.hardTimesUwp[0] = 'B'
         else:
             self.hardTimesUwp[0] = 'X'
-            self.historyString += "The Starport fell from a class B and crumbled to nothing, not even a landing beacon\n"
+            self.historyString += "The Starport fell from a class B and crumbled to nothing, not even a " \
+                                  "landing beacon\n"
 
     def crumble1b_mode_c(self):
         dicemod = 0
@@ -265,7 +267,8 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.hardTimesUwp[0] = 'C'
         else:
             self.hardTimesUwp[0] = 'X'
-            self.historyString += "The Starport fell from a class C and crumbled to nothing, not even a landing beacon\n"
+            self.historyString += "The Starport fell from a class C and crumbled to nothing, not even a " \
+                                  "landing beacon\n"
 
     def crumble1b_mode_d(self):
         dicemod = 0
@@ -288,7 +291,8 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.hardTimesUwp[0] = 'D'
         else:
             self.hardTimesUwp[0] = 'X'
-            self.historyString += "The Starport fell from a class D and crumbled to nothing, not even a landing beacon\n"
+            self.historyString += "The Starport fell from a class D and crumbled to nothing, not even a landing" \
+                                  " beacon\n"
 
     def crumble3(self):
         dicemod = 0
@@ -382,7 +386,39 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         reduction = self.degrees_of_change_dict[crumble_roll]
         increase = abs(reduction)  # Law level increases for visitors
         self.hardTimesUwp[6] += increase
-        self.historyString += "The society became more xenophobic, with the law level for visitors increasing to %d" % increase
+        self.historyString += "The society became more xenophobic, with the law level for visitors increasing to %d " \
+                              "from %d\n" % (increase, self.secondSurveyUwp[6])
+
+    def crumble6b(self):
+        dicemod = 0
+        if self.hardTimesUwp[2] == 5 or 6 or 8:
+            dicemod += 1
+        if self.hardTimesUwp[3] > 2 and self.hardTimesUwp[2] < 10:
+            dicemod += 1
+        if self.hardTimesUwp[7] < 5:
+            dicemod += 7
+        elif self.hardTimesUwp[7] == 5:
+            dicemod += 3
+        elif self.hardTimesUwp[7] == 6:
+            dicemod += 2
+        elif self.hardTimesUwp[7] == 7:
+            dicemod += 1
+        if self.hardTimesUwp[0] == 'A':
+            dicemod -= 5
+        elif self.hardTimesUwp[0] == 'B':
+            dicemod -= 4
+        elif self.hardTimesUwp[0] == 'C':
+            dicemod -= 2
+        elif self.hardTimesUwp[0] == 'D':
+            dicemod -= 1
+        crumble_roll = self.dice.roll_2d6() + dicemod
+        if crumble_roll > 10:
+            self.historyString += "The world has fallen into xenophobia and isolationism, it must have a double " \
+                                  "standard law level for visitors.\n"
+        else:
+            self.historyString += "The world has not fallen into abject isolationism, a double standard law level is" \
+                                  " at the Referee's discretion\n"
+
 
 
 if __name__ == "__main__":
