@@ -424,7 +424,6 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                                   " at the Referee's discretion\n"
 
     def crumble8(self):
-        dicemod = 2
         tech_band = [self.crumble8_tech_band_1(), self.crumble8_tech_band_1(), self.crumble8_tech_band_1(),
                      self.crumble8_tech_band_2(), self.crumble8_tech_band_3(), self.crumble8_tech_band_4(),
                      self.crumble8_tech_band_4(), self.crumble8_tech_band_5(), self.crumble8_tech_band_5()]
@@ -436,10 +435,19 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.isDoomed = True
         elif enivronmental_dicemod > 1:
             self.isFailing = True
-
-
-        crumble_roll = self.dice.roll_1d6() + dicemod
+        pop_band = [self.crumble8_pop_band_1(), self.crumble8_pop_band_1(), self.crumble8_pop_band_1(),
+                    self.crumble8_pop_band_2(), self.crumble8_pop_band_2(), self.crumble8_pop_band_2(),
+                    self.crumble8_pop_band_3(), self.crumble8_pop_band_3(), self.crumble8_pop_band_3(),
+                    self.crumble8_pop_band_4(), self.crumble8_pop_band_4()]
+        try:
+            war_dicemod = pop_band[self.hardTimesUwp[4]]
+        except KeyError:
+            war_dicemod = 0
+        crumble_roll = self.dice.roll_1d6() + 2 + enivronmental_dicemod + war_dicemod
         reduction = self.degrees_of_change_dict[crumble_roll]
+        self.historyString += "The population multiplier fell by %d due to lack of life support [note if this number" \
+                              " would reduce the population modifier below one, reduce the pop UWP and wrap around to a " \
+                              "population modifier of 9]\n" % reduction  # TODO auto population modifier
 
     def crumble8_tech_band_1(self):
         dicemod = 0
@@ -526,6 +534,44 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         if self.hardTimesUwp[2] == 12:
             dicemod += 1
         return  dicemod
+
+    def crumble8_pop_band_1(self):
+        dicemod = -3
+        if self.warzoneStatus == 'I':
+            dicemod += 1
+        elif self.warzoneStatus == 'B':
+            dicemod += 1
+        return dicemod
+
+    def crumble8_pop_band_2(self):
+        dicemod = -2
+        if self.warzoneStatus == 'W':
+            dicemod += 1
+        elif self.warzoneStatus == 'I':
+            dicemod += 2
+        elif self.warzoneStatus == 'B':
+            dicemod += 3
+        return dicemod
+
+    def crumble8_pop_band_3(self):
+        dicemod = 0
+        if self.warzoneStatus == 'W':
+            dicemod += 2
+        elif self.warzoneStatus == 'I':
+            dicemod += 3
+        elif self.warzoneStatus == 'B':
+            dicemod += 5
+        return dicemod
+
+    def crumble8_pop_band_4(self):
+        dicemod = 1
+        if self.warzoneStatus == 'W':
+            dicemod += 1
+        elif self.warzoneStatus == 'I':
+            dicemod += 2
+        elif self.warzoneStatus == 'B':
+            dicemod += 3
+        return dicemod
 
 
 if __name__ == "__main__":
