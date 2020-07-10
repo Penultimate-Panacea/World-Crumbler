@@ -164,11 +164,6 @@
          <string>9</string>
         </property>
        </item>
-       <item>
-        <property name="text">
-         <string>A</string>
-        </property>
-       </item>
       </widget>
       <widget class="QComboBox" name="OriginalAtmosphereInput">
        <property name="geometry">
@@ -227,11 +222,6 @@
        <item>
         <property name="text">
          <string>9</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>A</string>
         </property>
        </item>
       </widget>
@@ -294,11 +284,6 @@
          <string>9</string>
         </property>
        </item>
-       <item>
-        <property name="text">
-         <string>A</string>
-        </property>
-       </item>
       </widget>
       <widget class="QComboBox" name="OriginalPopulationInput">
        <property name="geometry">
@@ -357,11 +342,6 @@
        <item>
         <property name="text">
          <string>9</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>A</string>
         </property>
        </item>
       </widget>
@@ -427,11 +407,6 @@
          <string>9</string>
         </property>
        </item>
-       <item>
-        <property name="text">
-         <string>A</string>
-        </property>
-       </item>
       </widget>
       <widget class="QComboBox" name="OriginalLawInput">
        <property name="geometry">
@@ -492,11 +467,6 @@
          <string>9</string>
         </property>
        </item>
-       <item>
-        <property name="text">
-         <string>A</string>
-        </property>
-       </item>
       </widget>
       <widget class="QComboBox" name="OriginalTechInput">
        <property name="geometry">
@@ -555,11 +525,6 @@
        <item>
         <property name="text">
          <string>9</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>A</string>
         </property>
        </item>
       </widget>
@@ -2073,7 +2038,7 @@
       <x>370</x>
       <y>80</y>
       <width>241</width>
-      <height>371</height>
+      <height>491</height>
      </rect>
     </property>
     <widget class="QPushButton" name="CrumbleStage_1a">
@@ -2115,7 +2080,7 @@
       <string>Stage Three</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="CrumbleStage_6">
+    <widget class="QPushButton" name="CrumbleStage_6a">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -2125,23 +2090,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>Stage Six</string>
+      <string>Stage Six A</string>
      </property>
     </widget>
     <widget class="QPushButton" name="CrumbleStage_8">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>170</y>
-       <width>221</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Stage Eight</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="CrumbleStage_9">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -2151,14 +2103,27 @@
       </rect>
      </property>
      <property name="text">
-      <string>Stage Nine</string>
+      <string>Stage Eight</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="CrumbleStage_9a">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>250</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stage Nine A</string>
      </property>
     </widget>
     <widget class="QPushButton" name="CrumbleStage_10">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>250</y>
+       <y>370</y>
        <width>221</width>
        <height>31</height>
       </rect>
@@ -2171,7 +2136,7 @@
      <property name="geometry">
       <rect>
        <x>110</x>
-       <y>290</y>
+       <y>410</y>
        <width>121</width>
        <height>71</height>
       </rect>
@@ -2184,7 +2149,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>330</y>
+       <y>450</y>
        <width>91</width>
        <height>31</height>
       </rect>
@@ -2264,7 +2229,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>290</y>
+       <y>410</y>
        <width>91</width>
        <height>31</height>
       </rect>
@@ -2274,6 +2239,45 @@
      </property>
      <property name="maximum">
       <number>365</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="CrumbleStage_11">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>330</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stage Nine C</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="CrumbleStage_9b">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>290</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stage Nine B</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="CrumbleStage_6b">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>170</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stage Six B</string>
      </property>
     </widget>
    </widget>
