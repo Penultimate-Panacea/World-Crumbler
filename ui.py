@@ -23,8 +23,8 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.hexagon = 9999
         self.dice = DiceRoller
         self.stageThreeTLBuffer = 0
-        self.secondSurveyUwp = ['X', '0', '0', '0', '0', '0', '0', '0']
-        self.hardTimesUwp = ['X', '0', '0', '0', '0', '0', '0', '0']
+        self.secondSurveyUwp = ['X', 0, 0, 0, 0, 0, 0, 0]
+        self.hardTimesUwp = ['X', 0, 0, 0, 0, 0, 0, 0]
         self.warzoneStatus = None # TODO safe, warzone, intense, black ['S', 'W', 'I', 'B']
         self.areaStatus = None  # TODO determine frontier, safe, outland, wild areas  ['F', 'S', 'O', 'W']
         self.isIsolated = False
@@ -38,15 +38,17 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def manual_uwp(self):
         self.secondSurveyUwp[0] = self.OriginalStarportInput.currentText()
-        self.secondSurveyUwp[1] = self.OriginalSizeInput.currentText()
-        self.secondSurveyUwp[2] = self.OriginalAtmosphereInput.currentText()
-        self.secondSurveyUwp[3] = self.OriginalHydrosphereInput.currentText()
-        self.secondSurveyUwp[4] = self.OriginalPopulationInput.currentText()
-        self.secondSurveyUwp[5] = self.OriginalGovernmentInput.currentText()
-        self.secondSurveyUwp[6] = self.OriginalLawInput.currentText()
-        self.secondSurveyUwp[7] = self.OriginalTechInput.currentText()
+        self.secondSurveyUwp[1] = int(self.OriginalSizeInput.currentText())
+        self.secondSurveyUwp[2] = int(self.OriginalAtmosphereInput.currentText())
+        self.secondSurveyUwp[3] = int(self.OriginalHydrosphereInput.currentText())
+        self.secondSurveyUwp[4] = int(self.OriginalPopulationInput.currentText())
+        self.secondSurveyUwp[5] = int(self.OriginalGovernmentInput.currentText())
+        self.secondSurveyUwp[6] = int(self.OriginalLawInput.currentText())
+        self.secondSurveyUwp[7] = int(self.OriginalTechInput.currentText())
         self.sectorName = self.SectorNameInput.currentText()
         self.worldName = self.PlanetManualInput.text()
+
+        # TODO replace the int casts to handle conversion to hexadecimal
 
     def api_uwp(self):
         self.sectorName = self.TravellerMapSector.currentText()
@@ -56,7 +58,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         uwp_string = uwp_returned.replace('-', '')
         i = 0
         for char in uwp_string:
-            self.secondSurveyUwp[i] = char
+            self.secondSurveyUwp[i] = int(char)
             i += 1
         print(self.secondSurveyUwp)
         world_string = "Sector:" + world["SectorName"] + "\nSubsector:" + world["SubsectorName"] + "\nWorld:" + \
