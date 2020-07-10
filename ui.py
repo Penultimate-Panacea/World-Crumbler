@@ -23,6 +23,9 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.hexagon = 9999
         self.dice = DiceRoller
         self.stageThreeTLBuffer = 0
+        self.stageThreeTLDrop = 0
+        self.stageOnePopDrop = 0
+        self.stageSixPopMultiplierDrop = 0
         self.biosphereDamage = False
         self.secondSurveyUwp = ['X', 0, 0, 0, 0, 0, 0, 0]
         self.hardTimesUwp = ['X', 0, 0, 0, 0, 0, 0, 0]
@@ -88,6 +91,10 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.toolBox.setDisabled(False)
         self.CrumbleWidget.setDisabled(True)
 
+    def calc_pop_drop(self):
+        pop_drop = self.secondSurveyUwp[4] - self.hardTimesUwp[4]
+        return pop_drop
+
     def crumble1a(self):
         warzone_dicemods = {'S': 0, 'W': 1, 'I': 2, 'B': 3}
         dice_modifier = 0
@@ -110,9 +117,11 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             if damage_roll < 4:
                 years = self.dice.roll_1d6()
                 self.historyString += "Average planetary temperature decreases for the next %d years\n" % years
+                self.stageOnePopDrop = self.calc_pop_drop()
             elif damage_roll < 6:
                 temperature_decrease = self.dice.roll_1d6() + 6
                 self.historyString += "Permanent planetary temperature decrease of %d Kelvin" % temperature_decrease
+                self.stageOnePopDrop = self.calc_pop_drop()
             elif damage_roll < 9:
                 taint_shift = {5: 4, 7: 6, 9: 8}
                 try:
@@ -120,6 +129,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 except KeyError:
                     pass
                 self.historyString += "Atmosphere Tainted\n"
+                self.stageOnePopDrop = self.calc_pop_drop()
             elif damage_roll < 11:
                 taint_shift = {3: 2, 5: 4, 7: 6, 9: 8}
                 self.stageThreeTLBuffer += 3
@@ -129,11 +139,13 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                     pass
                 self.hardTimesUwp[4] -= 1
                 self.historyString += "Atmosphere Tainted, leading to population loss\n"
+                self.stageOnePopDrop = self.calc_pop_drop()
             elif damage_roll < 13:
                 self.hardTimesUwp[2] = 12
                 self.stageThreeTLBuffer += 6
                 self.hardTimesUwp[4] -= 2
                 self.historyString += "Atmosphere Insidious, leading to population loss\n"
+                self.stageOnePopDrop = self.calc_pop_drop()
             elif damage_roll >= 13:
                 self.hardTimesUwp[2] = 12
                 self.hardTimesUwp[4] = 0
@@ -141,6 +153,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 self.hardTimesUwp[6] = 0
                 self.hardTimesUwp[7] = 0
                 self.historyString += "World Annihilated\n"
+                self.stageOnePopDrop = self.calc_pop_drop()
 
     def crumble1b(self):
         if self.secondSurveyUwp[0] == 'A':
@@ -355,6 +368,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         crumble_roll = self.dice.roll_1d6() + dicemod + self.stageThreeTLBuffer
         reduction = self.degrees_of_change_dict[crumble_roll]
         self.hardTimesUwp[7] = self.secondSurveyUwp[7] + reduction
+        self.stageThreeTLDrop = abs(reduction)
         self.historyString += "The planets tech level fell from %d to %d during the recession\n" % (
             self.secondSurveyUwp[7], self.hardTimesUwp[7])
 
