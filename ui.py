@@ -58,7 +58,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         uwp_string = uwp_returned.replace('-', '')
         i = 0
         for char in uwp_string:
-            self.secondSurveyUwp[i] = int(char)
+            self.secondSurveyUwp[i] = int(char)  # TODO replace the int casts to handle conversion to hexadecimal
             i += 1
         print(self.secondSurveyUwp)
         world_string = "Sector:" + world["SectorName"] + "\nSubsector:" + world["SubsectorName"] + "\nWorld:" + \
@@ -81,7 +81,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         dice_modifier = 0
         if self.secondSurveyUwp[0] == "A":
             dice_modifier += 1
-        if self.secondSurveyUwp[4] > '8':
+        if self.secondSurveyUwp[4] > 8:
             dice_modifier += 1
         dice_modifier += warzone_dicemods[self.warzoneStatus]
         roll = self.dice.roll_2d6() + dice_modifier
@@ -101,14 +101,14 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 temperature_decrease = self.dice.roll_1d6()+6
                 self.historyString += "Permanent planetary temperature decrease of %d Kelvin" % temperature_decrease
             elif damage_roll < 9:
-                taint_shift = {'5': '4', '7': '6', '9': '8'}
+                taint_shift = {5: 4, 7: 6, 9: 8}
                 try:
                     self.hardTimesUwp[2] = taint_shift[self.hardTimesUwp[2]]
                 except KeyError:
                     pass
                 self.historyString += "Atmosphere Tainted\n"
             elif damage_roll < 11:
-                taint_shift = {'3': '2', '5': '4', '7': '6', '9': '8'}
+                taint_shift = {3: 2, 5: 4, 7: 6, 9: 8}
                 self.stageThreeTLBuffer += 3
                 try:
                     self.hardTimesUwp[2] = taint_shift[self.hardTimesUwp[2]]
@@ -117,16 +117,16 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 self.hardTimesUwp[4] -= 1
                 self.historyString += "Atmosphere Tainted, leading to population loss\n"
             elif damage_roll < 13:
-                self.hardTimesUwp[2] = "C"
+                self.hardTimesUwp[2] = 12
                 self.stageThreeTLBuffer += 6
                 self.hardTimesUwp[4] -= 2
                 self.historyString += "Atmosphere Insidious, leading to population loss\n"
             elif damage_roll >= 13:
-                self.hardTimesUwp[2] = 'C'
-                self.hardTimesUwp[4] = '0'
-                self.hardTimesUwp[5] = '0'
-                self.hardTimesUwp[6] = '0'
-                self.hardTimesUwp[7] = '0'
+                self.hardTimesUwp[2] = 12
+                self.hardTimesUwp[4] = 0
+                self.hardTimesUwp[5] = 0
+                self.hardTimesUwp[6] = 0
+                self.hardTimesUwp[7] = 0
                 self.historyString += "World Annihilated\n"
 
     def crumble1b(self):
@@ -155,17 +155,17 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             dicemod += 3
         if self.isIsolated:
             dicemod += 2
-        if self.secondSurveyUwp[4] == '0' or '1' or '2':
+        if self.secondSurveyUwp[4] == 0 or 1 or 2:
             dicemod += 2
-        elif self.secondSurveyUwp[4] == '3' or '4':
+        elif self.secondSurveyUwp[4] == 3 or 4:
             dicemod += 1
-        if self.secondSurveyUwp[7] == '0' or '1' or '2' or '3' or '4':
+        if self.secondSurveyUwp[7] == 0 or 1 or 2 or 3 or 4:
             dicemod += 8
-        elif self.secondSurveyUwp[7] == '5' or '6':
+        elif self.secondSurveyUwp[7] == 5 or 6:
             dicemod += 5
-        elif self.secondSurveyUwp[7] == '7' or '8':
+        elif self.secondSurveyUwp[7] == 7 or 8:
             dicemod += 3
-        elif self.secondSurveyUwp[7] == '9' or 'A':
+        elif self.secondSurveyUwp[7] == 9 or 10:
             dicemod += 1
         crumble_roll = self.dice.roll_1d6() + dicemod
 
@@ -181,15 +181,15 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             dicemod += 2
         if self.isIsolated:
             dicemod += 3
-        if self.secondSurveyUwp[4] == '0' or '1' or '2':
+        if self.secondSurveyUwp[4] == 0 or 1 or 2:
             dicemod += 2
-        elif self.secondSurveyUwp[4] == '3' or '4':
+        elif self.secondSurveyUwp[4] == 3 or 4:
             dicemod += 1
-        if self.secondSurveyUwp[7] == '0' or '1' or '2' or '3' or '4':
+        if self.secondSurveyUwp[7] == 0 or 1 or 2 or 3 or 4:
             dicemod += 7
-        elif self.secondSurveyUwp[7] == '5' or '6':
+        elif self.secondSurveyUwp[7] == 5 or 6:
             dicemod += 4
-        elif self.secondSurveyUwp[7] == '7' or '8':
+        elif self.secondSurveyUwp[7] == 7 or 8:
             dicemod += 1
         crumble_roll = self.dice.roll_1d6() + dicemod
 
@@ -205,11 +205,11 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             dicemod += 2
         if self.isIsolated:
             dicemod += 4
-        if self.secondSurveyUwp[4] == '0' or '1' or '2':
+        if self.secondSurveyUwp[4] == 0 or 1 or 2:
             dicemod += 1
-        if self.secondSurveyUwp[7] == '0' or '1' or '2' or '3' or '4':
+        if self.secondSurveyUwp[7] == 0 or 1 or 2 or 3 or 4:
             dicemod += 5
-        elif self.secondSurveyUwp[7] == '5' or '6':
+        elif self.secondSurveyUwp[7] == 5 or 6:
             dicemod += 3
         crumble_roll = self.dice.roll_1d6() + dicemod
 
@@ -221,9 +221,9 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             dicemod += 1
         if self.isIsolated:
             dicemod += 1
-        if self.secondSurveyUwp[7] == '0' or '1' or '2' or '3' or '4':
+        if self.secondSurveyUwp[7] == 0 or 1 or 2 or 3 or 4:
             dicemod += 3
-        elif self.secondSurveyUwp[7] == '5' or '6':
+        elif self.secondSurveyUwp[7] == 5 or 6:
             dicemod += 1
         crumble_roll = self.dice.roll_1d6() + dicemod
 
