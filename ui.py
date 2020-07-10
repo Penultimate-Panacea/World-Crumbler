@@ -25,8 +25,8 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.stageThreeTLBuffer = 0
         self.secondSurveyUwp = ['X', 0, 0, 0, 0, 0, 0, 0]
         self.hardTimesUwp = ['X', 0, 0, 0, 0, 0, 0, 0]
-        self.warzoneStatus = None # TODO safe, warzone, intense, black ['S', 'W', 'I', 'B']
-        self.areaStatus = None  # TODO determine frontier, safe, outland, wild areas  ['F', 'S', 'O', 'W']
+        self.warzoneStatus = 'S'  # TODO safe, warzone, intense, black ['S', 'W', 'I', 'B']
+        self.areaStatus = 'S'  # TODO determine frontier, safe, outland, wild areas  ['F', 'S', 'O', 'W']
         self.isIsolated = False
         self.ManualInputPushButton.clicked.connect(self.manual_uwp)
         self.TravellerMapGetPlanet.clicked.connect(self.api_uwp)
@@ -34,7 +34,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.UnlockEntryButton.clicked.connect(self.unlock_input)
         self.CrumbleWidget.setDisabled(True)
         self.CrumbleStage_1a.clicked.connect(self.crumble1a)
-        self.CrumbleStage_1b.clicked.connect(self.crumble1b())
+        self.CrumbleStage_1b.clicked.connect(self.crumble1b)
         self.degrees_of_change_dict = {1: 0, 2: 0, 3: 0, 4: 0, 5: -1, 6: -1, 7: -2, 8: -2, 9: -3, 10: -3, 11: -4,
                                        12: -4, 13: -5, 14: -5, 15: -6, 16: -6, 17: -7, 18: -7, 19: -8, 20: -8, 21: -9,
                                        22: -9, 23: -10, 24: -10, 25: -11, 26: -11, 27: -12, 28: -12, 29: -13, 30: -13}
@@ -61,6 +61,8 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         uwp_string = uwp_returned.replace('-', '')
         i = 0
         for char in uwp_string:
+            if i == 0:
+                break
             self.secondSurveyUwp[i] = int(char)  # TODO replace the int casts to handle conversion to hexadecimal
             i += 1
         print(self.secondSurveyUwp)
@@ -101,7 +103,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 years = self.dice.roll_1d6()
                 self.historyString += "Average planetary temperature decreases for the next %d years\n" % years
             elif damage_roll < 6:
-                temperature_decrease = self.dice.roll_1d6()+6
+                temperature_decrease = self.dice.roll_1d6() + 6
                 self.historyString += "Permanent planetary temperature decrease of %d Kelvin" % temperature_decrease
             elif damage_roll < 9:
                 taint_shift = {5: 4, 7: 6, 9: 8}
@@ -341,9 +343,11 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         crumble_roll = self.dice.roll_1d6() + dicemod + self.stageThreeTLBuffer
         reduction = self.degrees_of_change_dict[crumble_roll]
         self.hardTimesUwp[7] = self.secondSurveyUwp[7] + reduction
-        self.historyString += "The planets tech level fell from %d to %d during the recession\n" % (self.secondSurveyUwp[7], self.hardTimesUwp[7])
+        self.historyString += "The planets tech level fell from %d to %d during the recession\n" % (
+        self.secondSurveyUwp[7], self.hardTimesUwp[7])
 
-    def crumble6(self):
+    def crumble6a(self):
+        pass
 
 
 if __name__ == "__main__":
