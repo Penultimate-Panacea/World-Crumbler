@@ -338,10 +338,12 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             dicemod += 1
         elif self.areaStatus == 'W':
             dicemod += 3
-        crumble_roll = self.dice.roll_1d6() + dicemod
+        crumble_roll = self.dice.roll_1d6() + dicemod + self.stageThreeTLBuffer
         reduction = self.degrees_of_change_dict[crumble_roll]
         self.hardTimesUwp[7] = self.secondSurveyUwp[7] + reduction
         self.historyString += "The planets tech level fell from %d to %d during the recession\n" % (self.secondSurveyUwp[7], self.hardTimesUwp[7])
+
+    def crumble6(self):
 
 
 if __name__ == "__main__":
