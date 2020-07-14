@@ -719,6 +719,67 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.hardTimesUwp[6] = law_level_roll
         self.historyString += "The law level fell to %d.\n" % self.hardTimesUwp[6]
 
+    def auto_cumble(self):
+        # Stage 1 300-1124
+        # Stage 3 181-1125
+        # Stage 6 001-1127
+        # Stage 8 001-1128
+        # Stage 9 181-1128
+        date = self.DateSpinBox.value()
+        try:
+            year = int(self.YearComboBox.currentText())
+            if year == 1124 and date > 299:
+                self.crumble1a()
+                self.crumble1b()
+                self.update_results()
+            elif year == 1125 and date > 180:
+                self.crumble1a()
+                self.crumble1b()
+                self.crumble3()
+                self.update_results()
+            elif year == 1127:
+                self.crumble1a()
+                self.crumble1b()
+                self.crumble3()
+                self.crumble6a()
+                self.crumble6b()
+                self.update_results()
+            elif year == 1128 and date < 181:
+                self.crumble1a()
+                self.crumble1b()
+                self.crumble3()
+                self.crumble6a()
+                self.crumble6b()
+                self.crumble8()
+                self.update_results()
+            elif year == 1128 and date > 180:
+                self.crumble1a()
+                self.crumble1b()
+                self.crumble3()
+                self.crumble6a()
+                self.crumble6b()
+                self.crumble8()
+                self.crumble9()
+                self.update_results()
+            else:
+                self.historyString = "Hard Times not applicable"
+                self.hardTimesUwp = self.secondSurveyUwp
+                self.update_results()
+        except ValueError:
+            if self.YearComboBox.currentText() == "1129+":
+                self.crumble1a()
+                self.crumble1b()
+                self.crumble3()
+                self.crumble6a()
+                self.crumble6b()
+                self.crumble8()
+                self.crumble9()
+                self.update_results()
+            else:
+                self.historyString = "Hard Times not applicable"
+                self.hardTimesUwp = self.secondSurveyUwp
+                self.update_results()
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(argv)
