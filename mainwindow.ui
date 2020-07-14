@@ -27,7 +27,7 @@
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>110</y>
+      <y>80</y>
       <width>231</width>
       <height>391</height>
      </rect>
@@ -2252,7 +2252,7 @@
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>520</y>
+      <y>490</y>
       <width>231</width>
       <height>41</height>
      </rect>
@@ -2265,9 +2265,9 @@
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>80</y>
+      <y>544</y>
       <width>231</width>
-      <height>25</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
@@ -2280,7 +2280,7 @@
       <x>370</x>
       <y>80</y>
       <width>241</width>
-      <height>501</height>
+      <height>441</height>
      </rect>
     </property>
     <widget class="QPushButton" name="CrumbleStage_1a">
@@ -2358,14 +2358,14 @@
       </rect>
      </property>
      <property name="text">
-      <string>Stage Nine A</string>
+      <string>Stage Nine</string>
      </property>
     </widget>
     <widget class="QPushButton" name="CrumbleStage_10">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>370</y>
+       <y>290</y>
        <width>221</width>
        <height>31</height>
       </rect>
@@ -2378,7 +2378,7 @@
      <property name="geometry">
       <rect>
        <x>110</x>
-       <y>420</y>
+       <y>360</y>
        <width>121</width>
        <height>71</height>
       </rect>
@@ -2391,7 +2391,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>460</y>
+       <y>400</y>
        <width>91</width>
        <height>31</height>
       </rect>
@@ -2426,7 +2426,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>420</y>
+       <y>360</y>
        <width>91</width>
        <height>31</height>
       </rect>
@@ -2436,32 +2436,6 @@
      </property>
      <property name="maximum">
       <number>365</number>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="CrumbleStage_11">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>330</y>
-       <width>221</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Stage Nine C</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="CrumbleStage_9b">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>290</y>
-       <width>221</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Stage Nine B</string>
      </property>
     </widget>
     <widget class="QPushButton" name="CrumbleStage_6b">
@@ -2480,10 +2454,10 @@
     <widget class="Line" name="line">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>400</y>
-       <width>241</width>
-       <height>16</height>
+       <x>20</x>
+       <y>330</y>
+       <width>201</width>
+       <height>20</height>
       </rect>
      </property>
      <property name="frameShadow">
