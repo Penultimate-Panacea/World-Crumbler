@@ -72,8 +72,11 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         i = 0
         for char in uwp_string:
             if i == 0:
-                break
-            self.secondSurveyUwp[i] = int(char)  # TODO replace the int casts to handle conversion to hexadecimal
+                self.secondSurveyUwp[i] = char
+            elif i == 7:
+                self.secondSurveyUwp[i] = char
+            else:
+                self.secondSurveyUwp[i] = int(char)  # TODO replace the int casts to handle conversion to hexadecimal
             i += 1
         print(self.secondSurveyUwp)
         world_string = "Sector:" + world["SectorName"] + "\nSubsector:" + world["SubsectorName"] + "\nWorld:" + \
