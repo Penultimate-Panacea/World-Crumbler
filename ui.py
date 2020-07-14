@@ -30,6 +30,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.biosphereDamage = False
         self.secondSurveyUwp = ['X', 0, 0, 0, 0, 0, 0, 0]
         self.hardTimesUwp = ['X', 0, 0, 0, 0, 0, 0, 0]
+        self.api_used = False
         self.warzoneStatus = 'S'  # TODO safe, warzone, intense, black ['S', 'W', 'I', 'B']
         self.areaStatus = 'S'  # TODO determine frontier, safe, outland, wild areas  ['F', 'S', 'O', 'W']
         self.isIsolated = False
@@ -69,9 +70,25 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.secondSurveyUwp[5] = self.hex_char_convert_to_int(self.OriginalGovernmentInput.currentText())
         self.secondSurveyUwp[6] = self.hex_char_convert_to_int(self.OriginalLawInput.currentText())
         self.secondSurveyUwp[7] = self.hex_char_convert_to_int(self.OriginalTechInput.currentText())
-        self.sectorName = self.SectorNameInput.currentText()
         self.worldName = self.PlanetManualInput.text()
         self.isIsolated = self.IsolationCheckBox.isChecked()
+        if self.AreaManualInput.currentText() == "Safe":
+            self.areaStatus = 'S'
+        elif self.AreaManualInput.currentText() == "Frontier":
+            self.areaStatus = 'F'
+        elif self.AreaManualInput.currentText() == "Outlands":
+            self.areaStatus = 'O'
+        elif self.AreaManualInput.currentText() == "Wilds":
+            self.areaStatus = 'W'
+        if self.WarzoneManualInput.currentText() == "Safe":
+            self.warzoneStatus = 'S'
+        elif self.WarzoneManualInput.currentText() == "Warzone":
+            self.warzoneStatus = 'W'
+        elif self.WarzoneManualInput.currentText() == "Intense WZ":
+            self.warzoneStatus = 'I'
+        elif self.WarzoneManualInput.currentText() == "Black WZ":
+            self.warzoneStatus = 'B'
+        self.api_used = False
 
     @staticmethod
     def hex_char_convert_to_int(char):
@@ -113,6 +130,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             return 17
 
     def api_uwp(self):
+        self.api_used = True
         self.sectorName = self.TravellerMapSector.currentText()
         self.hexagon = self.TravellerMapHex.text()  # TODO hex validator
         world = tmap_gets.get_hexagon_json(self.sectorName, self.hexagon)
@@ -132,7 +150,10 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.api_isolation_check()
 
     def finalize_input(self):
-        dice_seed = self.sectorName + self.worldName
+        if self.api_used:
+            dice_seed = self.sectorName + str(self.hexagon)
+        else:
+            dice_seed = self.worldName
         self.dice = DiceRoller(dice_seed)
         self.hardTimesUwp = self.secondSurveyUwp
         self.toolBox.setDisabled(True)
@@ -193,7 +214,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         roll = self.dice.roll_2d6() + dice_modifier
         if self.warzoneStatus == 'S':
             roll = 0
-        if roll > 13:
+        elif roll > 13:
             self.historyString += "Biosphere Damage\n"
             self.biosphereDamage = True
             self.hardTimesUwp[0] = "X"
