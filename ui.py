@@ -113,7 +113,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.sectorName = self.TravellerMapSector.currentText()
         self.hexagon = self.TravellerMapHex.text()  # TODO hex validator
         world = tmap_gets.get_hexagon_json(self.sectorName, self.hexagon)
-        uwp_returned = world["WorldUwp"]
+        uwp_returned = world["UWP"]
         uwp_string = uwp_returned.replace('-', '')
         i = 0
         for char in uwp_string:
