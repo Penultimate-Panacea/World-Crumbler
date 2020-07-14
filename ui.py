@@ -51,13 +51,13 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def manual_uwp(self):
         self.secondSurveyUwp[0] = self.OriginalStarportInput.currentText()
-        self.secondSurveyUwp[1] = int(self.OriginalSizeInput.currentText())
-        self.secondSurveyUwp[2] = int(self.OriginalAtmosphereInput.currentText())
-        self.secondSurveyUwp[3] = int(self.OriginalHydrosphereInput.currentText())
-        self.secondSurveyUwp[4] = int(self.OriginalPopulationInput.currentText())
-        self.secondSurveyUwp[5] = int(self.OriginalGovernmentInput.currentText())
-        self.secondSurveyUwp[6] = int(self.OriginalLawInput.currentText())
-        self.secondSurveyUwp[7] = int(self.OriginalTechInput.currentText())
+        self.secondSurveyUwp[1] = self.hex_char_convert_to_int(self.OriginalSizeInput.currentText())
+        self.secondSurveyUwp[2] = self.hex_char_convert_to_int(self.OriginalAtmosphereInput.currentText())
+        self.secondSurveyUwp[3] = self.hex_char_convert_to_int(self.OriginalHydrosphereInput.currentText())
+        self.secondSurveyUwp[4] = self.hex_char_convert_to_int(self.OriginalPopulationInput.currentText())
+        self.secondSurveyUwp[5] = self.hex_char_convert_to_int(self.OriginalGovernmentInput.currentText())
+        self.secondSurveyUwp[6] = self.hex_char_convert_to_int(self.OriginalLawInput.currentText())
+        self.secondSurveyUwp[7] = self.hex_char_convert_to_int(self.OriginalTechInput.currentText())
         self.sectorName = self.SectorNameInput.currentText()
         self.worldName = self.PlanetManualInput.text()
 
