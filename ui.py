@@ -169,7 +169,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                       formatted_sss
         self.SecondSurveyLabel.setText(second_html)
         hard_times_string = self.uwp_to_string(self.hardTimesUwp)
-        formatted_hts = hard_times_string[:4] + '-' + hard_times_string[4:]
+        formatted_hts = hard_times_string[:7] + '-' + hard_times_string[7:]
         second_html = "<html><head/><body><p><span style=\" font-size:16pt;\">%s</span></p></body></html>" % \
                       formatted_hts
         self.HardTimesLabel.setText(second_html)
