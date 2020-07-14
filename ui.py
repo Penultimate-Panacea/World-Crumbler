@@ -660,6 +660,10 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                     starting_pluralism = pluralism_list.index(7)  # If no government type applies, assume balkanized
             final_pluralism = starting_pluralism + reduction
             self.hardTimesUwp[5] = pluralism_list[final_pluralism]
+        law_level_roll = self.dice.roll_1d6() + self.hardTimesUwp[5]
+        if law_level_roll < 0:
+            law_level_roll = 0
+        self.hardTimesUwp[6] = law_level_roll
 
 
 if __name__ == "__main__":
