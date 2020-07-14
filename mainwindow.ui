@@ -2348,7 +2348,7 @@
       <string>Stage Eight</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="CrumbleStage_9a">
+    <widget class="QPushButton" name="CrumbleStage_9">
      <property name="geometry">
       <rect>
        <x>10</x>

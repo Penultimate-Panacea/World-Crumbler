@@ -45,6 +45,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.CrumbleStage_6a.clicked.connect(self.crumble6a)
         self.CrumbleStage_6b.clicked.connect(self.crumble6b)
         self.CrumbleStage_8.clicked.connect(self.crumble8)
+        self.CrumbleStage_9.clicked.connect(self.crumble9)
         self.degrees_of_change_dict = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: -1, 6: -1, 7: -2, 8: -2, 9: -3, 10: -3, 11: -4,
                                        12: -4, 13: -5, 14: -5, 15: -6, 16: -6, 17: -7, 18: -7, 19: -8, 20: -8, 21: -9,
                                        22: -9, 23: -10, 24: -10, 25: -11, 26: -11, 27: -12, 28: -12, 29: -13, 30: -13}
