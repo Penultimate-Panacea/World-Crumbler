@@ -113,7 +113,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.sectorName = self.TravellerMapSector.currentText()
         self.hexagon = self.TravellerMapHex.text()  # TODO hex validator
         world = tmap_gets.get_hexagon_json(self.sectorName, self.hexagon)
-        uwp_returned = world["UWP"]
+        uwp_returned = world["WorldUwp"]
         uwp_string = uwp_returned.replace('-', '')
         i = 0
         for char in uwp_string:
@@ -635,6 +635,31 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         elif self.warzoneStatus == 'B':
             dicemod += 3
         return dicemod
+
+    def crumble9(self):
+        if self.stageThreeTLDrop > 0 or self.stageSixPopMultiplierDrop > 0:
+            dicemod = 0
+            if self.stageThreeTLDrop > 1:
+                dicemod += self.stageThreeTLDrop - 2
+            if self.stageSixPopMultiplierDrop > 1:
+                dicemod += self.stageSixPopMultiplierDrop - 1
+            crumble_roll = self.dice.roll_1d6() + dicemod
+            reduction = self.degrees_of_change_dict[crumble_roll]
+            pluralism_list = [0, 2, 4, 7, 8, 9, 5, 1, 6, 3, 12, 10, 11, 14, 0]
+            try:
+                if self.secondSurveyUwp[5] > 0:
+                    starting_pluralism = pluralism_list.index(self.secondSurveyUwp[5])
+                else:
+                    starting_pluralism = -1
+            except IndexError:
+                if self.secondSurveyUwp[5] == 13:
+                    starting_pluralism = pluralism_list.index(11)
+                elif self.secondSurveyUwp[5] == 15:
+                    starting_pluralism = pluralism_list.index(14)
+                else:
+                    starting_pluralism = pluralism_list.index(7)  # If no government type applies, assume balkanized
+            final_pluralism = starting_pluralism + reduction
+            self.hardTimesUwp[5] = pluralism_list[final_pluralism]
 
 
 if __name__ == "__main__":
