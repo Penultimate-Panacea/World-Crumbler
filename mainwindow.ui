@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -9,6 +12,12 @@
     <width>1000</width>
     <height>640</height>
    </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -164,6 +173,36 @@
          <string>9</string>
         </property>
        </item>
+       <item>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>B</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>C</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>D</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>E</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>F</string>
+        </property>
+       </item>
       </widget>
       <widget class="QComboBox" name="OriginalAtmosphereInput">
        <property name="geometry">
@@ -222,6 +261,36 @@
        <item>
         <property name="text">
          <string>9</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>B</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>C</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>D</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>E</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>F</string>
         </property>
        </item>
       </widget>
@@ -284,6 +353,36 @@
          <string>9</string>
         </property>
        </item>
+       <item>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>B</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>C</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>D</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>E</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>F</string>
+        </property>
+       </item>
       </widget>
       <widget class="QComboBox" name="OriginalPopulationInput">
        <property name="geometry">
@@ -342,6 +441,36 @@
        <item>
         <property name="text">
          <string>9</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>B</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>C</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>D</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>E</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>F</string>
         </property>
        </item>
       </widget>
@@ -407,6 +536,36 @@
          <string>9</string>
         </property>
        </item>
+       <item>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>B</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>C</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>D</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>E</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>F</string>
+        </property>
+       </item>
       </widget>
       <widget class="QComboBox" name="OriginalLawInput">
        <property name="geometry">
@@ -467,6 +626,36 @@
          <string>9</string>
         </property>
        </item>
+       <item>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>B</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>C</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>D</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>E</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>F</string>
+        </property>
+       </item>
       </widget>
       <widget class="QComboBox" name="OriginalTechInput">
        <property name="geometry">
@@ -525,6 +714,46 @@
        <item>
         <property name="text">
          <string>9</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>B</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>C</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>D</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>E</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>F</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>G</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>H</string>
         </property>
        </item>
       </widget>
@@ -1993,7 +2222,7 @@
    <widget class="QLabel" name="label_15">
     <property name="geometry">
      <rect>
-      <x>710</x>
+      <x>720</x>
       <y>30</y>
       <width>131</width>
       <height>41</height>
@@ -2156,41 +2385,6 @@
      </property>
      <item>
       <property name="text">
-       <string>1117</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1118</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1119</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1120</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1121</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1122</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1123</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
        <string>1124</string>
       </property>
      </item>
@@ -2212,16 +2406,6 @@
      <item>
       <property name="text">
        <string>1128</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1129</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>1130 and beyond</string>
       </property>
      </item>
     </widget>
@@ -2280,6 +2464,16 @@
       <string>Stage Six B</string>
      </property>
     </widget>
+   </widget>
+   <widget class="QTextBrowser" name="HistoryTextBrowser">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>80</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
