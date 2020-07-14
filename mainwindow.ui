@@ -864,9 +864,9 @@
       <widget class="QPushButton" name="ManualInputPushButton">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>0</x>
          <y>270</y>
-         <width>211</width>
+         <width>221</width>
          <height>51</height>
         </rect>
        </property>
@@ -1346,6 +1346,19 @@
        </property>
        <property name="placeholderText">
         <string>Planet Name</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="IsolationCheckBox">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>250</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Is Isolated?</string>
        </property>
       </widget>
      </widget>

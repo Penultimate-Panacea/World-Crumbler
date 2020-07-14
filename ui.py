@@ -49,6 +49,14 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                                        12: -4, 13: -5, 14: -5, 15: -6, 16: -6, 17: -7, 18: -7, 19: -8, 20: -8, 21: -9,
                                        22: -9, 23: -10, 24: -10, 25: -11, 26: -11, 27: -12, 28: -12, 29: -13, 30: -13}
 
+    def api_isolation_check(self):
+        jump2_json = tmap_gets.get_jump_json(self.sectorName, self.hexagon, 2)
+        world_count = len(jump2_json["Worlds"])
+        if world_count > 3:
+            self.isIsolated = True
+        else:
+            self.isIsolated = False
+
     def manual_uwp(self):
         self.secondSurveyUwp[0] = self.OriginalStarportInput.currentText()
         self.secondSurveyUwp[1] = self.hex_char_convert_to_int(self.OriginalSizeInput.currentText())
@@ -60,8 +68,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.secondSurveyUwp[7] = self.hex_char_convert_to_int(self.OriginalTechInput.currentText())
         self.sectorName = self.SectorNameInput.currentText()
         self.worldName = self.PlanetManualInput.text()
-
-        # TODO replace the int casts to handle conversion to hexadecimal
+        self.isIsolated = self.IsolationCheckBox.isChecked()
 
     @staticmethod
     def hex_char_convert_to_int(char):
@@ -119,6 +126,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         world_string = "Sector:" + world["SectorName"] + "\nSubsector:" + world["SubsectorName"] + "\nWorld:" + \
                        world["WorldName"] + "\nUWP:" + uwp_returned
         self.ReturnedAPILabel.setText(world_string)
+        self.api_isolation_check()
 
     def finalize_input(self):
         dice_seed = self.sectorName + self.worldName
