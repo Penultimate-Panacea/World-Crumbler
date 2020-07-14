@@ -63,6 +63,45 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         # TODO replace the int casts to handle conversion to hexadecimal
 
+    @staticmethod
+    def hex_char_convert_to_int(char):
+        if char == '0':
+            return 0
+        elif char == '1':
+            return 1
+        elif char == '2':
+            return 2
+        elif char == '3':
+            return 3
+        elif char == '4':
+            return 4
+        elif char == '5':
+            return 5
+        elif char == '6':
+            return 6
+        elif char == '7':
+            return 7
+        elif char == '8':
+            return 8
+        elif char == '9':
+            return 9
+        elif char == 'A':
+            return 10
+        elif char == 'B':
+            return 11
+        elif char == 'C':
+            return 12
+        elif char == 'D':
+            return 13
+        elif char == 'E':
+            return 14
+        elif char == 'F':
+            return 15
+        elif char == 'G':
+            return 16
+        elif char == 'H':
+            return 17
+
     def api_uwp(self):
         self.sectorName = self.TravellerMapSector.currentText()
         self.hexagon = self.TravellerMapHex.text()  # TODO hex validator
