@@ -2280,7 +2280,7 @@
       <x>370</x>
       <y>80</y>
       <width>241</width>
-      <height>491</height>
+      <height>501</height>
      </rect>
     </property>
     <widget class="QPushButton" name="CrumbleStage_1a">
@@ -2378,7 +2378,7 @@
      <property name="geometry">
       <rect>
        <x>110</x>
-       <y>410</y>
+       <y>420</y>
        <width>121</width>
        <height>71</height>
       </rect>
@@ -2391,7 +2391,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>450</y>
+       <y>460</y>
        <width>91</width>
        <height>31</height>
       </rect>
@@ -2426,7 +2426,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>410</y>
+       <y>420</y>
        <width>91</width>
        <height>31</height>
       </rect>
@@ -2475,6 +2475,25 @@
      </property>
      <property name="text">
       <string>Stage Six B</string>
+     </property>
+    </widget>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>400</y>
+       <width>241</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="lineWidth">
+      <number>3</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </widget>
