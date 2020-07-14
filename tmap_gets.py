@@ -4,7 +4,7 @@ from json import loads
 
 
 def get_hexagon_json(sector, hexagon):
-    with urlopen("https://travellermap.com/data/%s/%s" % (quote(sector), hexagon)) as url:
+    with urlopen("https://travellermap.com/api/credits?sector=%s&hex=%s" % (quote(sector), hexagon)) as url:
         json = loads(url.read().decode())
     return json
 
