@@ -112,10 +112,8 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         for char in uwp_string:
             if i == 0:
                 self.secondSurveyUwp[i] = char
-            elif i == 7:
-                self.secondSurveyUwp[i] = char
             else:
-                self.secondSurveyUwp[i] = int(char)  # TODO replace the int casts to handle conversion to hexadecimal
+                self.secondSurveyUwp[i] = self.hex_char_convert_to_int(char)
             i += 1
         print(self.secondSurveyUwp)
         world_string = "Sector:" + world["SectorName"] + "\nSubsector:" + world["SubsectorName"] + "\nWorld:" + \
@@ -486,7 +484,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                      self.crumble8_tech_band_4(), self.crumble8_tech_band_5(), self.crumble8_tech_band_5()]
         try:
             enivronmental_dicemod = tech_band[self.hardTimesUwp[7]]
-        except KeyError:
+        except IndexError:
             enivronmental_dicemod = 0
         if enivronmental_dicemod > 4:
             self.isDoomed = True
@@ -498,7 +496,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                     self.crumble8_pop_band_4(), self.crumble8_pop_band_4()]
         try:
             war_dicemod = pop_band[self.hardTimesUwp[4]]
-        except KeyError:
+        except IndexError:
             war_dicemod = 0
         crumble_roll = self.dice.roll_1d6() + 2 + enivronmental_dicemod + war_dicemod
         reduction = self.degrees_of_change_dict[crumble_roll]
