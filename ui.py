@@ -646,6 +646,12 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             crumble_roll = self.dice.roll_1d6() + dicemod
             reduction = self.degrees_of_change_dict[crumble_roll]
             pluralism_list = [0, 2, 4, 7, 8, 9, 5, 1, 6, 3, 12, 10, 11, 14, 0]
+            government_dictionary = {0: "anarchy", 2: "a participatory democracy", 4: "a representative democracy",
+                                     7: "a balkanization of governments", 8: "a civil service bureaucracy",
+                                     9: "an impersonal bureaucracy", 5: "technocratic feudalism", 1: "corporate rule",
+                                     6: "martial law", 3: "a self-perpetuating oligarchy", 12: "a charismatic oligarchy",
+                                     10: "a charismatic dictatorship", 11: "a noncharismatic or religious dictatorship",
+                                     14: "a totalitarian oligarhy or religious autocracy"}
             try:
                 if self.secondSurveyUwp[5] > 0:
                     starting_pluralism = pluralism_list.index(self.secondSurveyUwp[5])
@@ -658,12 +664,16 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                     starting_pluralism = pluralism_list.index(14)
                 else:
                     starting_pluralism = pluralism_list.index(7)  # If no government type applies, assume balkanized
-            final_pluralism = starting_pluralism + reduction
+            final_pluralism = starting_pluralism - reduction  # Reduction is negative here because the table on page 24
             self.hardTimesUwp[5] = pluralism_list[final_pluralism]
+            self.historyString += "The planet went through a retrenchment of political beliefs, with the government " \
+                                  "falling from %s to %s.\n" % (government_dictionary[self.secondSurveyUwp[5]],
+                                                                government_dictionary[self.hardTimesUwp[5]])
         law_level_roll = self.dice.roll_1d6() + self.hardTimesUwp[5]
         if law_level_roll < 0:
             law_level_roll = 0
         self.hardTimesUwp[6] = law_level_roll
+        self.historyString += "The law level fell to %d.\n" % self.hardTimesUwp[6]
 
 
 if __name__ == "__main__":
