@@ -865,14 +865,44 @@
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>310</y>
+         <y>290</y>
          <width>221</width>
-         <height>21</height>
+         <height>31</height>
         </rect>
        </property>
        <property name="text">
         <string>Submit UWP</string>
        </property>
+      </widget>
+      <widget class="QComboBox" name="WarzoneManualInput">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>40</y>
+         <width>91</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Safe</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Warzone</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Intense WZ</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Black WZ</string>
+        </property>
+       </item>
       </widget>
       <widget class="QLineEdit" name="PlanetManualInput">
        <property name="geometry">
@@ -906,84 +936,60 @@
         <string>Is Isolated?</string>
        </property>
       </widget>
-      <widget class="QComboBox" name="YearComboBox">
+      <widget class="QComboBox" name="AreaManualInput">
        <property name="geometry">
         <rect>
          <x>120</x>
-         <y>270</y>
-         <width>101</width>
-         <height>31</height>
+         <y>70</y>
+         <width>91</width>
+         <height>25</height>
         </rect>
        </property>
-       <property name="currentIndex">
-        <number>1</number>
-       </property>
        <item>
         <property name="text">
-         <string>1124-</string>
+         <string>Safe</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1124</string>
+         <string>Frontier</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1125</string>
+         <string>Outlands</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1126</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>1127</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>1128</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>1129+</string>
+         <string>Wilds</string>
         </property>
        </item>
       </widget>
-      <widget class="QSpinBox" name="DateSpinBox">
+      <widget class="QLabel" name="label_9">
        <property name="geometry">
         <rect>
-         <x>60</x>
-         <y>270</y>
-         <width>51</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="minimum">
-        <number>1</number>
-       </property>
-       <property name="maximum">
-        <number>365</number>
-       </property>
-       <property name="value">
-        <number>180</number>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_18">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>270</y>
-         <width>64</width>
-         <height>31</height>
+         <x>10</x>
+         <y>40</y>
+         <width>131</width>
+         <height>21</height>
         </rect>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Date:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>Warzone;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Area:</string>
        </property>
       </widget>
      </widget>
@@ -1803,7 +1809,7 @@
         <x>0</x>
         <y>80</y>
         <width>221</width>
-        <height>51</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="text">
@@ -1877,7 +1883,7 @@
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>490</y>
+      <y>520</y>
       <width>231</width>
       <height>41</height>
      </rect>
@@ -1912,7 +1918,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>50</y>
+       <y>10</y>
        <width>221</width>
        <height>31</height>
       </rect>
@@ -1925,7 +1931,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>90</y>
+       <y>70</y>
        <width>221</width>
        <height>31</height>
       </rect>
@@ -2079,6 +2085,86 @@
     </property>
     <property name="scaledContents">
      <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="YearComboBox">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>480</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>1124-</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1124</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1125</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1126</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1127</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1128</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1129+</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QSpinBox" name="DateSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>480</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>365</number>
+    </property>
+    <property name="value">
+     <number>180</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_18">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>480</y>
+      <width>64</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Date:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>

@@ -23,6 +23,8 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.worldName = "Test World Name"
         self.hexagon = 9999
         self.dice = DiceRoller
+        self.date = 111
+        self.year = 1111
         self.stageThreeTLBuffer = 0
         self.stageThreeTLDrop = 0
         self.stageOnePopDrop = 0
@@ -156,6 +158,8 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             dice_seed = self.worldName
         self.dice = DiceRoller(dice_seed)
         self.hardTimesUwp = self.secondSurveyUwp
+        self.date = self.DateSpinBox.value()
+
         self.toolBox.setDisabled(True)
         self.CrumbleWidget.setDisabled(False)
 
@@ -747,7 +751,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # Stage 6 001-1127
         # Stage 8 001-1128
         # Stage 9 181-1128
-        date = self.DateSpinBox.value()
+
         try:
             year = int(self.YearComboBox.currentText())
             if year == 1124 and date > 299:
