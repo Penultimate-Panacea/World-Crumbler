@@ -2,6 +2,7 @@ from PyQt5 import QtGui, QtWidgets, uic
 from sys import exit, argv
 from diceroller import DiceRoller
 import tmap_gets
+import re
 
 # myappid = 'fantozzi.worldcrumble.1.0'                            #  Currently not needed
 # windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)  #  Currently not needed
@@ -136,6 +137,42 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.toolBox.setDisabled(True)
         self.CrumbleWidget.setDisabled(False)
 
+    @staticmethod
+    def uwp_to_string(uwp):
+        output = ""
+        for i in uwp:
+            try:
+                if i < 10:
+                    output += str(i)
+                elif i == 10:
+                    output += "A"
+                elif i == 11:
+                    output += "B"
+                elif i == 12:
+                    output += "C"
+                elif i == 13:
+                    output += "D"
+                elif i == 14:
+                    output += "E"
+                elif i == 15:
+                    output += "F"
+            except TypeError:
+                output += str(i)
+        return output
+    
+    def update_results(self):
+        self.HistoryTextBrowser.setPlainText(self.historyString)
+        second_survey_string = self.uwp_to_string(self.secondSurveyUwp)
+        formatted_sss = second_survey_string[:7] + '-' + second_survey_string[7:]
+        second_html = "<html><head/><body><p><span style=\" font-size:16pt;\">%s</span></p></body></html>" % \
+                      formatted_sss
+        self.SecondSurveyLabel.setText(second_html)
+        hard_times_string = self.uwp_to_string(self.hardTimesUwp)
+        formatted_hts = hard_times_string[:4] + '-' + hard_times_string[4:]
+        second_html = "<html><head/><body><p><span style=\" font-size:16pt;\">%s</span></p></body></html>" % \
+                      formatted_hts
+        self.HardTimesLabel.setText(second_html)
+
     def unlock_input(self):
         self.toolBox.setDisabled(False)
         self.CrumbleWidget.setDisabled(True)
@@ -203,6 +240,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 self.hardTimesUwp[7] = 0
                 self.historyString += "World Annihilated\n"
                 self.stageOnePopDrop = self.calc_pop_drop()
+        self.update_results()
 
     def crumble1b(self):
         if self.secondSurveyUwp[0] == 'A':
@@ -215,6 +253,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.crumble1b_mode()
         else:
             self.hardTimesUwp[0] = self.secondSurveyUwp[0]
+        self.update_results()
 
     def crumble1b_mode_a(self):
         dicemod = 0
@@ -420,6 +459,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.stageThreeTLDrop = abs(reduction)
         self.historyString += "The planets tech level fell from %d to %d during the recession\n" % (
             self.secondSurveyUwp[7], self.hardTimesUwp[7])
+        self.update_results()
 
     def crumble6a(self):
         dicemod = 0
@@ -456,6 +496,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.hardTimesUwp[6] += increase
         self.historyString += "The society became more xenophobic, with the law level for visitors increasing to %d " \
                               "from %d\n" % (increase, self.secondSurveyUwp[6])
+        self.update_results()
 
     def crumble6b(self):
         dicemod = 0
@@ -486,6 +527,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         else:
             self.historyString += "The world has not fallen into abject isolationism, a double standard law level is" \
                                   " at the Referee's discretion\n"
+        self.update_results()
 
     def crumble8(self):
         tech_band = [self.crumble8_tech_band_1(), self.crumble8_tech_band_1(), self.crumble8_tech_band_1(),
@@ -512,6 +554,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.historyString += "The population multiplier fell by %d due to lack of life support [note if this number" \
                               " would reduce the population modifier below one, reduce the pop UWP and wrap around to a " \
                               "population modifier of 9]\n" % reduction  # TODO auto population modifier
+        self.update_results()
 
     def crumble8_tech_band_1(self):
         dicemod = 0
