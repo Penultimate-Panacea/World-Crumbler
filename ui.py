@@ -605,11 +605,19 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             war_dicemod = pop_band[self.hardTimesUwp[4]]
         except IndexError:
             war_dicemod = 0
+        initial_pop = self.population_multiplier * 10 ** self.secondSurveyUwp[4]
         crumble_roll = self.dice.roll_1d6() + 2 + enivronmental_dicemod + war_dicemod
         reduction = self.degrees_of_change_dict[crumble_roll]
-        self.historyString += "The population multiplier fell by %d due to lack of life support [note if this number" \
-                              " would reduce the population modifier below one, reduce the pop UWP and wrap around to a " \
-                              "population modifier of 9]\n" % reduction  # TODO auto population modifier
+        if self.population_multiplier + reduction > 0:
+            self.population_multiplier += reduction
+        else:
+            self.hardTimesUwp[4] -= 1
+            self.population_multiplier = 9
+            reduction -= 1
+            self.population_multiplier += reduction
+
+        reduced_pop = self.population_multiplier * 10 ** self.hardTimesUwp[4]
+        self.historyString += "The world's population fell from %s to %s.\n" % (initial_pop, reduced_pop)
         self.update_results()
 
     def crumble8_tech_band_1(self):
