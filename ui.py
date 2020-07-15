@@ -799,19 +799,19 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         if self.year == 1124 and self.date > 299:
             self.crumble1a()
             self.crumble1b()
-            self.upself.date_results()
+            self.update_results()
         elif self.year == 1125 and self.date > 180:
             self.crumble1a()
             self.crumble1b()
             self.crumble3()
-            self.upself.date_results()
+            self.update_results()
         elif self.year == 1127:
             self.crumble1a()
             self.crumble1b()
             self.crumble3()
             self.crumble6a()
             self.crumble6b()
-            self.upself.date_results()
+            self.update_results()
         elif self.year == 1128 and self.date < 181:
             self.crumble1a()
             self.crumble1b()
@@ -819,7 +819,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.crumble6a()
             self.crumble6b()
             self.crumble8()
-            self.upself.date_results()
+            self.update_results()
         elif self.year == 1128 and self.date > 180:
             self.crumble1a()
             self.crumble1b()
@@ -828,7 +828,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.crumble6b()
             self.crumble8()
             self.crumble9()
-            self.upself.date_results()
+            self.update_results()
         elif self.year > 1128:
             self.crumble1a()
             self.crumble1b()
