@@ -2,7 +2,7 @@ from PyQt5 import QtGui, QtWidgets, uic
 from sys import exit, argv
 from diceroller import DiceRoller
 import tmap_gets
-import re
+
 
 # myappid = 'fantozzi.worldcrumble.1.0'                            #  Currently not needed
 # windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)  #  Currently not needed
@@ -19,6 +19,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setFixedSize(1000, 640)
         self.setupUi(self)
         self.sectorName = "Test Sector Name"
+        self.subsectorIndex = "X"
         self.historyString = ""
         self.worldName = "Test World Name"
         self.hexagon = 9999
@@ -44,10 +45,10 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.UnlockEntryButton.clicked.connect(self.unlock_input)
         self.CrumbleWidget.setDisabled(True)
         self.CrumbleStage_1a.clicked.connect(self.crumble1a)
-        self.CrumbleStage_1b.clicked.connect(self.crumble1b)
+        # self.CrumbleStage_1b.clicked.connect(self.crumble1b)
         self.CrumbleStage_3.clicked.connect(self.crumble3)
         self.CrumbleStage_6a.clicked.connect(self.crumble6a)
-        self.CrumbleStage_6b.clicked.connect(self.crumble6b)
+        # self.CrumbleStage_6b.clicked.connect(self.crumble6b)
         self.CrumbleStage_8.clicked.connect(self.crumble8)
         self.CrumbleStage_9.clicked.connect(self.crumble9)
         self.AutoCrumble.clicked.connect(self.auto_crumble)
@@ -136,6 +137,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.sectorName = self.TravellerMapSector.currentText()
         self.hexagon = self.TravellerMapHex.text()  # TODO hex validator
         world = tmap_gets.get_hexagon_json(self.sectorName, self.hexagon)
+        self.subsectorIndex = world["SubsectorIndex"]
         uwp_returned = world["WorldUwp"]
         uwp_string = uwp_returned.replace('-', '')
         i = 0
@@ -150,6 +152,22 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                        world["WorldName"] + "\nUWP:" + uwp_returned
         self.ReturnedAPILabel.setText(world_string)
         self.api_isolation_check()
+        if self.AreaAPIInput.currentText() == "Safe":
+            self.areaStatus = 'S'
+        elif self.AreaAPIInput.currentText() == "Frontier":
+            self.areaStatus = 'F'
+        elif self.AreaAPIInput.currentText() == "Outlands":
+            self.areaStatus = 'O'
+        elif self.AreaAPIInput.currentText() == "Wilds":
+            self.areaStatus = 'W'
+        if self.WarzoneAPIInput.currentText() == "Safe":
+            self.warzoneStatus = 'S'
+        elif self.WarzoneAPIInput.currentText() == "Warzone":
+            self.warzoneStatus = 'W'
+        elif self.WarzoneAPIInput.currentText() == "Intense WZ":
+            self.warzoneStatus = 'I'
+        elif self.WarzoneAPIInput.currentText() == "Black WZ":
+            self.warzoneStatus = 'B'
 
     def finalize_input(self):
         if self.api_used:
@@ -267,6 +285,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 self.historyString += "World Annihilated\n"
                 self.stageOnePopDrop = self.calc_pop_drop()
         self.update_results()
+        self.crumble1b()
 
     def crumble1b(self):
         if self.secondSurveyUwp[0] == 'A':
@@ -523,6 +542,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.historyString += "The society became more xenophobic, with the law level for visitors increasing to %d " \
                               "from %d\n" % (increase, self.secondSurveyUwp[6])
         self.update_results()
+        self.crumble6b()
 
     def crumble6b(self):
         dicemod = 0

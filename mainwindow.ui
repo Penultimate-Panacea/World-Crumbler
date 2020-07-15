@@ -33,7 +33,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page">
      <property name="geometry">
@@ -1829,6 +1829,92 @@
        <string/>
       </property>
      </widget>
+     <widget class="QComboBox" name="AreaAPIInput">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>240</y>
+        <width>91</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Safe</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Frontier</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Outlands</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Wilds</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="WarzoneAPIInput">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>210</y>
+        <width>91</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Safe</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Warzone</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Intense WZ</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Black WZ</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>210</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Warzone;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>240</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Area:</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QLabel" name="label_12">
@@ -1868,7 +1954,7 @@
      <rect>
       <x>730</x>
       <y>30</y>
-      <width>131</width>
+      <width>141</width>
       <height>41</height>
      </rect>
     </property>
@@ -1896,7 +1982,7 @@
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>490</y>
+      <y>520</y>
       <width>231</width>
       <height>41</height>
      </rect>
@@ -1911,7 +1997,7 @@
       <x>370</x>
       <y>80</y>
       <width>241</width>
-      <height>391</height>
+      <height>321</height>
      </rect>
     </property>
     <widget class="QPushButton" name="CrumbleStage_1a">
@@ -1920,33 +2006,20 @@
        <x>10</x>
        <y>10</y>
        <width>221</width>
-       <height>31</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="text">
-      <string>Stage One A</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="CrumbleStage_1b">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>70</y>
-       <width>221</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Stage One B</string>
+      <string>Stage One</string>
      </property>
     </widget>
     <widget class="QPushButton" name="CrumbleStage_3">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>130</y>
+       <y>60</y>
        <width>221</width>
-       <height>31</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="text">
@@ -1957,22 +2030,22 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>170</y>
+       <y>110</y>
        <width>221</width>
-       <height>31</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="text">
-      <string>Stage Six A</string>
+      <string>Stage Six</string>
      </property>
     </widget>
     <widget class="QPushButton" name="CrumbleStage_8">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>250</y>
+       <y>160</y>
        <width>221</width>
-       <height>31</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="text">
@@ -1983,9 +2056,9 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>290</y>
+       <y>210</y>
        <width>221</width>
-       <height>31</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="text">
@@ -1996,26 +2069,13 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>330</y>
+       <y>260</y>
        <width>221</width>
        <height>51</height>
       </rect>
      </property>
      <property name="text">
       <string>AutoCrumble</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="CrumbleStage_6b">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>210</y>
-       <width>221</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Stage Six B</string>
      </property>
     </widget>
    </widget>
