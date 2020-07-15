@@ -5,7 +5,7 @@ import tmap_gets
 from urllib.error import HTTPError
 
 
-# myappid = 'fantozzi.worldcrumble.1.0'                            #  Currently not needed
+# myappid = 'fantozzi.worldcrumble.0.1a'                            #  Currently not needed
 # windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)  #  Currently not needed
 qtcreator_file = "mainwindow.ui"
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtcreator_file)
@@ -322,6 +322,8 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         else:
             self.hardTimesUwp[0] = self.secondSurveyUwp[0]
         self.update_results()
+        self.CrumbleStage_1a.setDisabled(True)
+        self.CrumbleStage_3.setDisabled(False)
 
     def crumble1b_mode_a(self):
         dicemod = 0
@@ -528,6 +530,8 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.historyString += "The planets tech level fell from %d to %d during the recession\n" % (
             self.secondSurveyUwp[7], self.hardTimesUwp[7])
         self.update_results()
+        self.CrumbleStage_3.setDisabled(True)
+        self.CrumbleStage_6a.setDisabled(False)
 
     def crumble6a(self):
         dicemod = 0
@@ -597,6 +601,8 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.historyString += "The world has not fallen into abject isolationism, a double standard law level is" \
                                   " at the Referee's discretion\n"
         self.update_results()
+        self.CrumbleStage_6a.setDisabled(True)
+        self.CrumbleStage_8.setDisabled(False)
 
     def crumble8(self):
         tech_band = [self.crumble8_tech_band_1(), self.crumble8_tech_band_1(), self.crumble8_tech_band_1(),
@@ -632,6 +638,8 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         reduced_pop = self.population_multiplier * 10 ** self.hardTimesUwp[4]
         self.historyString += "The world's population fell from %s to %s.\n" % (initial_pop, reduced_pop)
         self.update_results()
+        self.CrumbleStage_8.setDisabled(True)
+        self.CrumbleStage_9.setDisabled(False)
 
     def crumble8_tech_band_1(self):
         dicemod = 0
@@ -795,6 +803,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             law_level_roll = 0
         self.hardTimesUwp[6] = law_level_roll
         self.historyString += "The law level fell to %d.\n" % self.hardTimesUwp[6]
+        self.CrumbleStage_9.setDisabled(True)
 
     def auto_crumble(self):
         # Stage 1 300-1124
