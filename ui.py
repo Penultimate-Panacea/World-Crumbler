@@ -33,6 +33,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.biosphereDamage = False
         self.secondSurveyUwp = ['X', 0, 0, 0, 0, 0, 0, 0]
         self.hardTimesUwp = ['X', 0, 0, 0, 0, 0, 0, 0]
+        self.population_multiplier = 1
         self.api_used = False
         self.warzoneStatus = 'S'  # TODO safe, warzone, intense, black ['S', 'W', 'I', 'B']
         self.areaStatus = 'S'  # TODO determine frontier, safe, outland, wild areas  ['F', 'S', 'O', 'W']
@@ -73,6 +74,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.secondSurveyUwp[5] = self.hex_char_convert_to_int(self.OriginalGovernmentInput.currentText())
         self.secondSurveyUwp[6] = self.hex_char_convert_to_int(self.OriginalLawInput.currentText())
         self.secondSurveyUwp[7] = self.hex_char_convert_to_int(self.OriginalTechInput.currentText())
+        self.population_multiplier = self.OriginalPopMultiInput.currentText()
         self.worldName = self.PlanetManualInput.text()
         self.isIsolated = self.IsolationCheckBox.isChecked()
         if self.AreaManualInput.currentText() == "Safe":
@@ -139,6 +141,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         world = tmap_gets.get_hexagon_json(self.sectorName, self.hexagon)
         self.subsectorIndex = world["SubsectorIndex"]
         uwp_returned = world["WorldUwp"]
+        self.population_multiplier = int(str(world["WorldPbg"])[0])
         uwp_string = uwp_returned.replace('-', '')
         i = 0
         for char in uwp_string:
@@ -177,9 +180,16 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.dice = DiceRoller(dice_seed)
         self.hardTimesUwp = self.secondSurveyUwp
         self.date = self.DateSpinBox.value()
-
+        self.set_year()
         self.toolBox.setDisabled(True)
         self.CrumbleWidget.setDisabled(False)
+
+    def set_year(self):
+        try:
+            year_input = int(self.YearComboBox.currentText())
+            self.year = year_input
+        except ValueError:
+            self.year = 1130
 
     @staticmethod
     def uwp_to_string(uwp):
@@ -771,60 +781,52 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # Stage 6 001-1127
         # Stage 8 001-1128
         # Stage 9 181-1128
-
-        try:
-            year = int(self.YearComboBox.currentText())
-            if year == 1124 and date > 299:
-                self.crumble1a()
-                self.crumble1b()
-                self.update_results()
-            elif year == 1125 and date > 180:
-                self.crumble1a()
-                self.crumble1b()
-                self.crumble3()
-                self.update_results()
-            elif year == 1127:
-                self.crumble1a()
-                self.crumble1b()
-                self.crumble3()
-                self.crumble6a()
-                self.crumble6b()
-                self.update_results()
-            elif year == 1128 and date < 181:
-                self.crumble1a()
-                self.crumble1b()
-                self.crumble3()
-                self.crumble6a()
-                self.crumble6b()
-                self.crumble8()
-                self.update_results()
-            elif year == 1128 and date > 180:
-                self.crumble1a()
-                self.crumble1b()
-                self.crumble3()
-                self.crumble6a()
-                self.crumble6b()
-                self.crumble8()
-                self.crumble9()
-                self.update_results()
-            else:
-                self.historyString = "Hard Times not applicable"
-                self.hardTimesUwp = self.secondSurveyUwp
-                self.update_results()
-        except ValueError:
-            if self.YearComboBox.currentText() == "1129+":
-                self.crumble1a()
-                self.crumble1b()
-                self.crumble3()
-                self.crumble6a()
-                self.crumble6b()
-                self.crumble8()
-                self.crumble9()
-                self.update_results()
-            else:
-                self.historyString = "Hard Times not applicable"
-                self.hardTimesUwp = self.secondSurveyUwp
-                self.update_results()
+        if self.year == 1124 and self.date > 299:
+            self.crumble1a()
+            self.crumble1b()
+            self.upself.date_results()
+        elif self.year == 1125 and self.date > 180:
+            self.crumble1a()
+            self.crumble1b()
+            self.crumble3()
+            self.upself.date_results()
+        elif self.year == 1127:
+            self.crumble1a()
+            self.crumble1b()
+            self.crumble3()
+            self.crumble6a()
+            self.crumble6b()
+            self.upself.date_results()
+        elif self.year == 1128 and self.date < 181:
+            self.crumble1a()
+            self.crumble1b()
+            self.crumble3()
+            self.crumble6a()
+            self.crumble6b()
+            self.crumble8()
+            self.upself.date_results()
+        elif self.year == 1128 and self.date > 180:
+            self.crumble1a()
+            self.crumble1b()
+            self.crumble3()
+            self.crumble6a()
+            self.crumble6b()
+            self.crumble8()
+            self.crumble9()
+            self.upself.date_results()
+        elif self.year > 1128:
+            self.crumble1a()
+            self.crumble1b()
+            self.crumble3()
+            self.crumble6a()
+            self.crumble6b()
+            self.crumble8()
+            self.crumble9()
+            self.update_results()
+        else:
+            self.historyString = "Hard Times not applicable"
+            self.hardTimesUwp = self.secondSurveyUwp
+            self.update_results()
 
 
 if __name__ == "__main__":
