@@ -2,6 +2,7 @@ from PyQt5 import QtGui, QtWidgets, uic
 from sys import exit, argv
 from diceroller import DiceRoller
 import tmap_gets
+from urllib.error import HTTPError
 
 
 # myappid = 'fantozzi.worldcrumble.1.0'                            #  Currently not needed
@@ -35,8 +36,9 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.hardTimesUwp = ['X', 0, 0, 0, 0, 0, 0, 0]
         self.population_multiplier = 1
         self.api_used = False
-        self.warzoneStatus = 'S'  # TODO safe, warzone, intense, black ['S', 'W', 'I', 'B']
-        self.areaStatus = 'S'  # TODO determine frontier, safe, outland, wild areas  ['F', 'S', 'O', 'W']
+        self.ErrorLabel.setVisible(False)
+        self.warzoneStatus = 'S'
+        self.areaStatus = 'S'
         self.isIsolated = False
         self.isFailing = False
         self.isDoomed = False
@@ -137,40 +139,45 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def api_uwp(self):
         self.api_used = True
         self.sectorName = self.TravellerMapSector.currentText()
-        self.hexagon = self.TravellerMapHex.text()  # TODO hex validator
+        self.hexagon = str(self.HexColSpinBox.value()) + str(self.HexRowSpinBox.value())
         world = tmap_gets.get_hexagon_json(self.sectorName, self.hexagon)
-        self.subsectorIndex = world["SubsectorIndex"]
-        uwp_returned = world["WorldUwp"]
-        self.population_multiplier = int(str(world["WorldPbg"])[0])
-        uwp_string = uwp_returned.replace('-', '')
-        i = 0
-        for char in uwp_string:
-            if i == 0:
-                self.secondSurveyUwp[i] = char
-            else:
-                self.secondSurveyUwp[i] = self.hex_char_convert_to_int(char)
-            i += 1
-        print(self.secondSurveyUwp)
-        world_string = "Sector:" + world["SectorName"] + "\nSubsector:" + world["SubsectorName"] + "\nWorld:" + \
-                       world["WorldName"] + "\nUWP:" + uwp_returned
-        self.ReturnedAPILabel.setText(world_string)
-        self.api_isolation_check()
-        if self.AreaAPIInput.currentText() == "Safe":
-            self.areaStatus = 'S'
-        elif self.AreaAPIInput.currentText() == "Frontier":
-            self.areaStatus = 'F'
-        elif self.AreaAPIInput.currentText() == "Outlands":
-            self.areaStatus = 'O'
-        elif self.AreaAPIInput.currentText() == "Wilds":
-            self.areaStatus = 'W'
-        if self.WarzoneAPIInput.currentText() == "Safe":
-            self.warzoneStatus = 'S'
-        elif self.WarzoneAPIInput.currentText() == "Warzone":
-            self.warzoneStatus = 'W'
-        elif self.WarzoneAPIInput.currentText() == "Intense WZ":
-            self.warzoneStatus = 'I'
-        elif self.WarzoneAPIInput.currentText() == "Black WZ":
-            self.warzoneStatus = 'B'
+        try:
+            self.subsectorIndex = world["SubsectorIndex"]
+            uwp_returned = world["WorldUwp"]
+            self.population_multiplier = int(str(world["WorldPbg"])[0])
+            uwp_string = uwp_returned.replace('-', '')
+            i = 0
+            for char in uwp_string:
+                if i == 0:
+                    self.secondSurveyUwp[i] = char
+                else:
+                    self.secondSurveyUwp[i] = self.hex_char_convert_to_int(char)
+                i += 1
+            print(self.secondSurveyUwp)
+            world_string = "Sector:" + world["SectorName"] + "\nSubsector:" + world["SubsectorName"] + "\nWorld:" + \
+                           world["WorldName"] + "\nUWP:" + uwp_returned
+            self.ReturnedAPILabel.setText(world_string)
+            self.api_isolation_check()
+            if self.AreaAPIInput.currentText() == "Safe":
+                self.areaStatus = 'S'
+            elif self.AreaAPIInput.currentText() == "Frontier":
+                self.areaStatus = 'F'
+            elif self.AreaAPIInput.currentText() == "Outlands":
+                self.areaStatus = 'O'
+            elif self.AreaAPIInput.currentText() == "Wilds":
+                self.areaStatus = 'W'
+            if self.WarzoneAPIInput.currentText() == "Safe":
+                self.warzoneStatus = 'S'
+            elif self.WarzoneAPIInput.currentText() == "Warzone":
+                self.warzoneStatus = 'W'
+            elif self.WarzoneAPIInput.currentText() == "Intense WZ":
+                self.warzoneStatus = 'I'
+            elif self.WarzoneAPIInput.currentText() == "Black WZ":
+                self.warzoneStatus = 'B'
+            self.DataEntryButton.setDisabled(False)
+        except TypeError:
+            self.ErrorLabel.setVisible(True)
+            self.DataEntryButton.setDisabled(True)
 
     def finalize_input(self):
         if self.api_used:
