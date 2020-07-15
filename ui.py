@@ -96,6 +96,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         elif self.WarzoneManualInput.currentText() == "Black WZ":
             self.warzoneStatus = 'B'
         self.api_used = False
+        self.DataEntryButton.setDisabled(False)
 
     @staticmethod
     def hex_char_convert_to_int(char):
@@ -190,6 +191,8 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.set_year()
         self.toolBox.setDisabled(True)
         self.CrumbleWidget.setDisabled(False)
+        self.DataEntryButton.setDisabled(True)
+        self.UnlockEntryButton.setDisabled(False)
 
     def set_year(self):
         try:
@@ -237,12 +240,15 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def unlock_input(self):
         self.toolBox.setDisabled(False)
         self.CrumbleWidget.setDisabled(True)
+        self.DataEntryButton.setDisabled(False)
+        self.UnlockEntryButton.setDisabled(True)
 
     def calc_pop_drop(self):
         pop_drop = self.secondSurveyUwp[4] - self.hardTimesUwp[4]
         return pop_drop
 
     def crumble1a(self):
+        self.AutoCrumble.setDisabled(True)
         warzone_dicemods = {'S': 0, 'W': 1, 'I': 2, 'B': 3}
         dice_modifier = 0
         if self.secondSurveyUwp[0] == "A":

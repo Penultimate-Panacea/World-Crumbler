@@ -33,7 +33,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page">
      <property name="geometry">
@@ -992,7 +992,7 @@
         <string>Area:</string>
        </property>
       </widget>
-      <widget class="QComboBox" name="OriginalTechInput_2">
+      <widget class="QComboBox" name="OriginalPopMultiInput">
        <property name="geometry">
         <rect>
          <x>190</x>
@@ -1979,7 +1979,7 @@
      </widget>
      <widget class="QLabel" name="ErrorLabel">
       <property name="enabled">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
       <property name="geometry">
        <rect>
@@ -2044,6 +2044,9 @@
     </property>
    </widget>
    <widget class="QPushButton" name="DataEntryButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -2057,6 +2060,9 @@
     </property>
    </widget>
    <widget class="QPushButton" name="UnlockEntryButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>380</x>
@@ -2079,6 +2085,9 @@
      </rect>
     </property>
     <widget class="QPushButton" name="CrumbleStage_1a">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -2092,6 +2101,9 @@
      </property>
     </widget>
     <widget class="QPushButton" name="CrumbleStage_3">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -2105,6 +2117,9 @@
      </property>
     </widget>
     <widget class="QPushButton" name="CrumbleStage_6a">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -2118,6 +2133,9 @@
      </property>
     </widget>
     <widget class="QPushButton" name="CrumbleStage_8">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -2131,6 +2149,9 @@
      </property>
     </widget>
     <widget class="QPushButton" name="CrumbleStage_9">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -2144,6 +2165,9 @@
      </property>
     </widget>
     <widget class="QPushButton" name="AutoCrumble">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>10</x>
