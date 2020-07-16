@@ -2,8 +2,6 @@ from PyQt5 import QtGui, QtWidgets, uic
 from sys import exit, argv
 from diceroller import DiceRoller
 import tmap_gets
-from urllib.error import HTTPError
-
 
 # myappid = 'fantozzi.worldcrumble.0.1a'                            #  Currently not needed
 # windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)  #  Currently not needed
@@ -223,7 +221,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             except TypeError:
                 output += str(i)
         return output
-    
+
     def update_results(self):
         self.HistoryTextBrowser.setPlainText(self.historyString)
         second_survey_string = self.uwp_to_string(self.secondSurveyUwp)
@@ -259,7 +257,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         roll = self.dice.roll_2d6() + dice_modifier
         if self.warzoneStatus == 'S':
             roll = 0
-        elif roll > 13:
+        if roll > 13:
             self.historyString += "Biosphere Damage\n"
             self.biosphereDamage = True
             self.hardTimesUwp[0] = "X"
@@ -367,10 +365,12 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.historyString += "The Starport fell from a class A one to a class E one\n"
         elif reduction == 0:
             self.hardTimesUwp[0] = 'A'
-        else:
+        elif reduction < -4:
             self.hardTimesUwp[0] = 'X'
             self.historyString += "The Starport fell from a class A and crumbled to nothing, not even a " \
                                   "landing beacon\n"
+        else:
+            self.hardTimesUwp[0] = 'A'
 
     def crumble1b_mode_b(self):
         dicemod = 0
@@ -407,10 +407,12 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.historyString += "The Starport fell from a class B one to a class E one\n"
         elif reduction == 0:
             self.hardTimesUwp[0] = 'B'
-        else:
+        elif reduction < -3:
             self.hardTimesUwp[0] = 'X'
             self.historyString += "The Starport fell from a class B and crumbled to nothing, not even a " \
                                   "landing beacon\n"
+        else:
+            self.hardTimesUwp[0] = 'B'
 
     def crumble1b_mode_c(self):
         dicemod = 0
@@ -440,10 +442,12 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.historyString += "The Starport fell from a class C one to a class E one\n"
         elif reduction == 0:
             self.hardTimesUwp[0] = 'C'
-        else:
+        elif reduction < -2:
             self.hardTimesUwp[0] = 'X'
             self.historyString += "The Starport fell from a class C and crumbled to nothing, not even a " \
                                   "landing beacon\n"
+        else:
+            self.hardTimesUwp[0] = 'C'
 
     def crumble1b_mode_d(self):
         dicemod = 0
@@ -464,10 +468,12 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.historyString += "The Starport fell from a class D one to a class E one\n"
         elif reduction == 0:
             self.hardTimesUwp[0] = 'D'
-        else:
+        elif reduction < -1:
             self.hardTimesUwp[0] = 'X'
             self.historyString += "The Starport fell from a class D and crumbled to nothing, not even a landing" \
                                   " beacon\n"
+        else:
+            self.hardTimesUwp[0] = 'D'
 
     def crumble3(self):
         dicemod = 0
@@ -725,7 +731,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         dicemod = 0
         if self.hardTimesUwp[2] == 12:
             dicemod += 1
-        return  dicemod
+        return dicemod
 
     def crumble8_pop_band_1(self):
         dicemod = -3
@@ -778,8 +784,9 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             government_dictionary = {0: "anarchy", 2: "a participatory democracy", 4: "a representative democracy",
                                      7: "a balkanization of governments", 8: "a civil service bureaucracy",
                                      9: "an impersonal bureaucracy", 5: "technocratic feudalism", 1: "corporate rule",
-                                     6: "martial law", 3: "a self-perpetuating oligarchy", 12: "a charismatic oligarchy",
-                                     10: "a charismatic dictatorship", 11: "a noncharismatic or religious dictatorship",
+                                     6: "martial law", 3: "a self-perpetuating oligarchy",
+                                     12: "a charismatic oligarchy", 10: "a charismatic dictatorship",
+                                     11: "a noncharismatic or religious dictatorship",
                                      14: "a totalitarian oligarhy or religious autocracy"}
             try:
                 if self.secondSurveyUwp[5] > 0:
